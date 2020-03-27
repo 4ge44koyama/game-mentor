@@ -1,0 +1,9 @@
+<div class="content__title">
+  メンター記事の作成
+</div>
+
+<%= form_with model: @post, class: :form, local: true do |form| %>
+  <%= form.text_field :title, placeholder: :アピール文, class: :form__title %>
+  <%= form.text_area :content, placeholder: :得意ジャンルや指導内容など, class: :form__text %>
+  <%= form.submit '投稿する', class: :form__btn %>
+<% end %>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GameMentor</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class='header'>
+      <div class='header__menu'>
+        <div class='lists'>
+          <%= link_to "G-MEN", root_path, class: "logo-link" %>
+          <div class='logo-home'>
+            ゲーミングメンターサービス
+          </div>
+        </div>
+      </div>
+      <div class='header__right'>
+        <div class='header__right__search'>
+          検索窓
+        </div>
+        <div class='header__right__menu'>
+          <%= link_to "新規投稿", new_post_path, class: "header__right__menu-btn" %>
+        </div>
+      </div>
+    </header>
+    
+    <div class="main">
+      <%= yield %>
+    </div>
+    
+    <footer class='footer'>
+      <small>©️ Shigeyoshi Koyama</small>
+    </footer>
+  </body>
+</html>
