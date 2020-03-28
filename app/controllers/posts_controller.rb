@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   
   def index
-    @posts = Post.all
+    @@posts = Post.includes(:user)
   end
 
   def new
@@ -9,8 +9,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
-    redirect_to post_path(post.id)
+    @post = Post.create(post_params)
+    if @post.save
+      redirect_to post_path @post
+    else
+      redirect_to new_post_path
+    end  
   end
 
   def show
@@ -35,7 +39,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :content).merge(user_id: current_user.id
+    params.require(:post).permit(:title, :content, :fee).merge(user_id: current_user.id)
   end
 
 end

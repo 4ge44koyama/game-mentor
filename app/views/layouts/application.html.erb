@@ -30,6 +30,9 @@
           <div class='header__right__menu'>  
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right__menu-btn" %>
           </div>  
+          <div class="header__right__user-name">
+            <%= current_user.name %> さん
+          </div>
         <% else %>
           <div class='header__right__menu'>
             <%= link_to "ログイン", new_user_session_path, class: "header__right__menu-btn" %>
