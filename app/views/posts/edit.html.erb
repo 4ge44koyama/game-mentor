@@ -1,13 +1,13 @@
-<div class="new-post-page">
+<div class="edit-post-page">
 
   <div class="content__title">
-    メンター記事の作成
+    メンター記事の編集
   </div>
   <%= form_with model: @post, class: :form, local: true do |form| %>
     <%= form.text_field :title, placeholder: :アピール文, class: :form__title %>
     <%= form.text_area :content, placeholder: :得意ジャンルや指導内容など, class: :form__text %>
     <%= form.text_field :fee, placeholder: :料金, class: :form__fee %>
-    <%= form.submit '投稿する', class: :form__btn %>
+    <%= form.submit '編集する', class: :form__btn %>
   <% end %>
 
-</div>  
+</div>
