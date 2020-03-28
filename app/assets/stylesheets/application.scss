@@ -61,6 +61,12 @@ body {
           color: white;
         }
       }
+      &__user-name {
+        position: absolute;
+        right: 200px;
+        bottom: 8px;
+        color: white;
+      }
     }
   }
 
