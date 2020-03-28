@@ -1,0 +1,36 @@
+.new-user-background {
+  background-color: #f4f8fa;
+  padding: 60px;
+  .new-user-register {
+    height: 500px;
+    background-color: white;
+    text-align: center;
+    h2 {
+      font-size: 32px;
+      padding: 16px 24px;
+    }
+    .new_user {
+      height: 400px;
+      font-size: 20px;
+      margin-bottom: 32px;
+      .field {
+        margin-bottom: 16px;
+        .input-field {
+          width: 50%;
+          height: 32px;
+          border-radius: 10px;
+        }
+      }
+      .actions {
+        height: 80px;
+        line-height: 80px;
+        .register-btn {
+          width: 30%;
+          padding: 4px;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
