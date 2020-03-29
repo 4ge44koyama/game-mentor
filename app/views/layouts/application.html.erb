@@ -27,9 +27,9 @@
           <div class='header__right__menu'>
             <%= link_to "新規投稿", new_post_path, class: "header__right__menu-btn" %>
           </div>  
-          <div class='header__right__menu'>  
+          <div class='header__right__menu'>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right__menu-btn" %>
-          </div>  
+          </div>
           <div class="header__right__user-name">
             <%= current_user.name %> さん
           </div>
