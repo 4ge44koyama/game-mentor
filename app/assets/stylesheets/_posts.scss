@@ -1,5 +1,23 @@
 // 投稿一覧ページ
+* {
+  box-sizing: border-box;
+}
+
 .site-image {
+  position: relative;
+  text-align: center;
+  &__message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    font-size: 120px;
+    color: white;
+    opacity: 0.6;
+    letter-spacing: 3.0rem;
+    z-index: 1;
+  }
   &__w {
     opacity: 0.7;
     width: 100%;
@@ -9,60 +27,83 @@
 }
 
 .contents {
-  width: 100%;
-  height: 100vh;
-  background-color: #fcc9ac;
-  padding: 40px;
+  background-color: whitesmoke;
+  padding: 40px 20px;
   display: flex;
   flex-wrap: wrap;
-  .mentor-card {
-    box-sizing: border-box;
-    width: calc( 50% - 260px );
-    background-color: white;
-    padding: 16px;
-    margin: 16px;
-    &__top {
-      display: flex;
-      padding: 8px;
-      .mentor-info {
-        width: 80px;
-        height: 80px;
-        text-align: center;
-        margin-right: 16px;
-        &__face {
-          margin-top: 16px;
-          margin-bottom: 8px;
-          .icon {
-            height: 80px;
-            width: 80px;
+  .card-link:nth-child(3n) {
+    margin-right: 0;
+  }
+  .card-link {
+    text-decoration: none;
+    display: inline-block;
+    width: calc((100% - 80px) / 3);
+    margin-right: 40px;
+    margin-bottom: 40px;
+    .mentor-card {
+      background-color: white;
+      padding: 16px;
+      &__top {
+        display: flex;
+        .mentor-info {
+          width: 120px;
+          text-align: center;
+          margin-right: 16px;
+          font-size: 12px;
+          &__face {
+            .icon {
+              height: 96px;
+              width: 96px;
+              vertical-align: bottom;
+            }
+          }
+          &__name {
+            color: black;
+            height: 36px;
           }
         }
-      }
-    }
-    &__tags {
-      display: flex;
-      margin: 8px 0 8px 16px;
-      align-items: center;
-      ul {
-        display: flex;
-        margin: 8px 0 8px 28px;
-        li {
-          margin-right: 8px;
+        .mentor-detail {
+          color: black;
+          height: 114px;
+          width: 100%;
+          padding: 10px;
+          text-align: left;
+          font-weight: bold;
+          background-color: lemonchiffon;
         }
       }
-    }
-    &__charge {
-      display: flex;
-      margin: 8px 0 8px 16px;
-      .personal-fee {
-        margin-left: 28px;
-      }
-    }
-    &__score {
-      display: flex;
-      margin: 8px 0 8px 16px;
-      .personal-score {
-        margin-left: 28px;
+      &__bottom {
+        padding: 8px;
+        margin-top: 24px;
+        &__tags {
+          display: flex;
+          padding: 4px 0;
+          align-items: center;
+          ul {
+            display: flex;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 28px;
+            li {
+              margin-right: 8px;
+            }
+          }
+        }
+        &__charge {
+          display: flex;
+          padding: 4px 0;
+          .personal-fee {
+            margin-left: 28px;
+          }
+        }
+        &__score {
+          display: flex;
+          padding-top: 4px;
+          padding-bottom: 8px;
+          .personal-score {
+            margin-left: 28px;
+          }
+        }
       }
     }
   }

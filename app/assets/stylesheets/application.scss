@@ -14,7 +14,7 @@ body {
     padding: 0 20px;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     &__menu {
       width: auto;
       margin-right:auto;
@@ -27,6 +27,7 @@ body {
           font-size: 32px;
           font-weight: bold;
           text-decoration: none;
+          color: white;
         }
         .logo-home {
           margin-left: 16px;
@@ -64,7 +65,7 @@ body {
       &__user-name {
         position: absolute;
         right: 200px;
-        bottom: 8px;
+        bottom: 4px;
         color: white;
       }
     }
