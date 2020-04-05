@@ -1,0 +1,44 @@
+<%= link_to post_path(post.id), class: "card-link" do %>
+  <div class='mentor-card'>
+    <div class='mentor-card__top'>
+      <div class='mentor-info'>
+        <div class='mentor-info__face'>
+          <%= image_tag 'sutehage', class: 'icon' %>
+        </div>
+        <div class='mentor-info__name'>
+          <%= post.user.name %>
+        </div>
+      </div>
+      
+      <div class='mentor-detail'>
+        <%= post.title %>
+      </div>
+    </div>
+
+    <div class="mentor-card__bottom">
+      <div class='mentor-card__bottom__tags'>
+        タグ:
+        <ul>
+          <li>テスト</li>
+          <li>テスト</li>
+          <li>テスト</li>
+        </ul>
+      </div>
+      <div class='mentor-card__bottom__charge'>
+        料金:
+        <div class='personal-fee'>
+          <%= post.fee %>
+        </div>
+          
+      </div>
+      <div class='mentor-card__bottom__score'>
+        評価:
+        <div class='personal-score'>
+          ☆☆☆☆☆
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
