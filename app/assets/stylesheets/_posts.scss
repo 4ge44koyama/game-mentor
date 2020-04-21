@@ -3,7 +3,13 @@
   box-sizing: border-box;
 }
 
+a:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+
 .site-image {
+  margin-top :100px;
   position: relative;
   text-align: center;
   &__message {
@@ -36,6 +42,7 @@
   }
   .card-link {
     text-decoration: none;
+    color: black;
     display: inline-block;
     width: calc((100% - 80px) / 3);
     margin-right: 40px;
@@ -59,12 +66,12 @@
           }
           &__name {
             color: black;
-            height: 36px;
+            height: 48px;
           }
         }
         .mentor-detail {
           color: black;
-          height: 114px;
+          height: 126px;
           width: 100%;
           padding: 10px;
           text-align: left;
@@ -74,7 +81,7 @@
       }
       &__bottom {
         padding: 8px;
-        margin-top: 24px;
+        margin-top: 12px;
         &__tags {
           display: flex;
           padding: 4px 0;
@@ -135,60 +142,62 @@
 
 // 新規投稿ページ
 .new-post-page {
-
+  margin-top: 100px;
   .content__title {
-    padding: 10px;
+    padding: 30px 0 30px 0;
     font-size: 30px;
     font-weight: bold;
-    padding-top: 30px;
     text-align: center;
-    }
-  
-  .form {
-    width: 85%;
-    height: 100%;
-    margin: 0 auto 100px;
-    padding-top: 30px;
-    &__title {
-      display: block;
-      width: 95%;
-      height: 50px;
-      padding: 6px 12px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-    }
-    &__text {
-      display: block;
-      width: 95%;
-      height: 500px;
-      margin-top: 15px;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      resize: none;
-    }
-    &__fee {
-      display: block;
-      width: 95%;
-      height: 50px;
-      margin-top: 15px;
-      padding: 6px 12px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-    }
-    &__btn {
-      display: block;
-      width: 75%;
-      margin: 30px auto 30px;
-      padding: 16px;
-      border-radius: 10px;
-      cursor: pointer;
+  }
+  .content__form {
+    margin: 0 auto;
+    .form {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto 100px;
+      padding: 0 5%;
+      &__title {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 6px 12px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+      &__text {
+        display: block;
+        width: 100%;
+        height: 500px;
+        margin-top: 15px;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        resize: none;
+      }
+      &__fee {
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin-top: 15px;
+        padding: 6px 12px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+      &__btn {
+        display: block;
+        width: 75%;
+        margin: 70px auto;
+        padding: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
     }
   }
 }
 
 // 投稿詳細ページ
 .show-post-page {
+  margin-top: 100px;
   display: flex;
   justify-content: space-between;
   padding: 60px;
