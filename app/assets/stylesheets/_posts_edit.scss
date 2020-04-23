@@ -1,0 +1,52 @@
+.edit-post-page {
+
+  .content__title {
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 30px;
+    text-align: center;
+    }
+  
+  .form {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto 100px;
+    padding-top: 30px;
+    &__title {
+      display: block;
+      width: 95%;
+      height: 50px;
+      padding: 6px 12px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    &__text {
+      display: block;
+      width: 95%;
+      height: 500px;
+      margin-top: 15px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      resize: none;
+    }
+    &__fee {
+      display: block;
+      width: 95%;
+      height: 50px;
+      margin-top: 15px;
+      padding: 6px 12px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    &__btn {
+      display: block;
+      width: 75%;
+      margin: 30px auto 30px;
+      padding: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}

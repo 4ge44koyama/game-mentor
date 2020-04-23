@@ -1,0 +1,19 @@
+= render partial: "top-header"
+.show-post-page
+  .user-profile
+    .user-profile__icon
+      .user-profile__icon__cover
+      = image_tag 'sutehage', class: 'user-profile__icon__show'
+    .user-profile__info
+      .user-profile__info__name
+        名前: #{@post.user.name}
+      .user-profile__info__fee
+        料金: #{@post.fee}
+      .user-profile__info__score
+        評価: ★★★★★(10)
+  .user-appeal
+    .post__title
+      = @post.title
+    .post__content
+      = simple_format @post.content
+= render partial: "top-footer"

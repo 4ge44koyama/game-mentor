@@ -1,0 +1,46 @@
+= render partial: "posts/top-header"
+
+.mypage-container
+  .mypage-container__header
+
+    .left-menu
+      %ul.left-menu__lists
+        %li
+          = link_to "トップページ", root_path
+        %li
+          %a ユーザー情報編集
+        %li
+          %a メッセージ
+        %li
+          %a やることリスト
+        %li
+          %a あなたのメンティー
+        %li
+          %a あなたのメンター
+        %li
+          %a プロフィール編集
+        %li
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+
+    .right-profile
+      .right-profile__header
+        名前: ステハゲさん
+      .right-profile__info 事務局からのお知らせ
+      %ul.info-all
+        %li.info-all__list
+          .info-all__list__wrapper
+            .info-message お知らせ 1
+            .info-time 4月19日 00:00
+        %li.info-all__list
+          .info-all__list__wrapper
+            .info-message お知らせ2
+            .info-time 4月20日 00:00
+        %li.info-all__list
+          .info-all__list__wrapper
+            .info-message お知らせ3
+            .info-time 4月21日 00:00
+
+      .right-profile__messeges 新着メッセージ
+
+
+= render partial: "posts/top-footer"

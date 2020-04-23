@@ -1,8 +1,8 @@
 // ユーザー新規登録画面
-
 .new-user-background {
   background-color: #f4f8fa;
   padding: 60px 240px;
+  margin-top: 100px;
   .new-user-register {
     height: 600px;
     background-color: white;
@@ -19,7 +19,7 @@
         margin-bottom: 16px;
         .input-field {
           width: 50%;
-          height: 32px;
+          height: 40px;
           border-radius: 10px;
         }
       }
@@ -29,7 +29,7 @@
         .register-btn {
           width: 30%;
           padding: 4px;
-          border-radius: 10px;
+          border-radius: 5px;
           cursor: pointer;
         }
       }
@@ -38,10 +38,10 @@
 }
 
 // ユーザーログイン画面
-
 .login-user-background {
   background-color: #f4f8fa;
   padding: 60px 240px;
+  margin-top: 100px;
   .login-user-box {
     height: 600px;
     background-color: white;
@@ -58,8 +58,8 @@
         margin-bottom: 16px;
         .input-field {
           width: 50%;
-          height: 32px;
-          border-radius: 10px;
+          height: 40px;
+          border-radius: 5px;
         }
       }
       .actions {

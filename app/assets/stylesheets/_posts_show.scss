@@ -1,0 +1,66 @@
+.show-post-page {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  background-color: #f4f8fa;
+  .user-profile {
+    position: sticky;
+    align-self: flex-start;
+    top: 100px;
+    background-color: white;
+    width: 30%;
+    padding: 40px;
+    &__icon {
+      // border: 2px solid;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 32px;
+      &__show {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        vertical-align: bottom;
+      }
+    }
+    &__info {
+      &__name {
+        text-align: center;
+        padding-bottom: 16px;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
+      }
+      &__fee {
+        padding: 16px 0 12px 44px;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
+      }
+      &__score {
+        padding: 16px 0 12px 44px;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
+      }
+    }
+  }
+
+  .user-appeal {
+    background-color: white;
+    width: 55%;
+    .post__title {
+      padding: 8px 0;
+      text-align: center;
+      background-color: paleturquoise;
+      font-size: 40px;
+      font-weight: 900;
+    }
+    .post__content {
+      padding: 16px;
+      text-align: left;
+      font-size: 20px;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
