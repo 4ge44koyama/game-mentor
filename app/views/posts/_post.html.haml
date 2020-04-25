@@ -1,0 +1,25 @@
+= link_to post_path(post.id), class: "card-link" do
+  .mentor-card
+    .mentor-card__top
+      .mentor-info
+        .mentor-info__face
+          = image_tag 'sutehage', class: 'icon'
+        .mentor-info__name
+          = post.user.name
+      .mentor-detail
+        = post.title
+    .mentor-card__bottom
+      .mentor-card__bottom__tags
+        タグ:
+        %ul
+          %li テスト
+          %li テスト
+          %li テスト
+      .mentor-card__bottom__charge
+        料金:
+        .personal-fee
+          = post.fee
+      .mentor-card__bottom__score
+        評価:
+        .personal-score
+          ☆☆☆☆☆
