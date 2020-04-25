@@ -5,4 +5,322 @@
 a:hover {
   opacity: 0.6;
   text-decoration: none;
+<<<<<<< HEAD
+=======
+}
+
+<<<<<<< Updated upstream
+.site-image {
+  margin-top :100px;
+  position: relative;
+  text-align: center;
+  &__message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    font-size: 120px;
+    color: white;
+    opacity: 0.6;
+    letter-spacing: 3.0rem;
+    z-index: 1;
+  }
+  &__w {
+    opacity: 0.7;
+    width: 100%;
+    height: 80vh;
+    vertical-align: bottom;
+  }
+}
+
+.contents {
+  background-color: whitesmoke;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  .card-link:nth-child(3n) {
+    margin-right: 0;
+  }
+  .card-link {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    width: calc((100% - 80px) / 3);
+    margin-right: 40px;
+    margin-bottom: 40px;
+    .mentor-card {
+      background-color: white;
+      padding: 16px;
+      &__top {
+        display: flex;
+        .mentor-info {
+          width: 120px;
+          text-align: center;
+          margin-right: 16px;
+          font-size: 12px;
+          &__face {
+            .icon {
+              height: 96px;
+              width: 96px;
+              vertical-align: bottom;
+            }
+          }
+          &__name {
+            color: black;
+            height: 48px;
+          }
+        }
+        .mentor-detail {
+          color: black;
+          height: 126px;
+          width: 100%;
+          padding: 10px;
+          text-align: left;
+          font-weight: bold;
+          background-color: lemonchiffon;
+        }
+      }
+      &__bottom {
+        padding: 8px;
+        margin-top: 12px;
+        &__tags {
+          display: flex;
+          padding: 4px 0;
+          align-items: center;
+          ul {
+            display: flex;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: 28px;
+            li {
+              margin-right: 8px;
+            }
+          }
+        }
+        &__charge {
+          display: flex;
+          padding: 4px 0;
+          .personal-fee {
+            margin-left: 28px;
+          }
+        }
+        &__score {
+          display: flex;
+          padding-top: 4px;
+          padding-bottom: 8px;
+          .personal-score {
+            margin-left: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.touroku {
+  height: 160px;
+  background-color: orange;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 40px;
+  align-items: center;
+  .register-link {
+    text-align: center;
+    margin: 40px 0 40px 0;
+    line-height: 80px;
+    height: 80px;
+    .register-link-btn {
+      text-decoration: none;
+      border: 2px solid #fcc9ac;
+      border-radius: 8px;
+      padding: 16px 100px;
+      margin: 24px;
+      color: orange;
+      background-color: white;
+    }  
+  }
+}
+
+// 新規投稿ページ
+.new-post-page {
+  margin-top: 100px;
+  .content__title {
+    padding: 30px 0 30px 0;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .content__form {
+    margin: 0 auto;
+    .form {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto 100px;
+      padding: 0 5%;
+      &__title {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 6px 12px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+      &__text {
+        display: block;
+        width: 100%;
+        height: 500px;
+        margin-top: 15px;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        resize: none;
+      }
+      &__fee {
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin-top: 15px;
+        padding: 6px 12px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+      &__btn {
+        display: block;
+        width: 75%;
+        margin: 70px auto;
+        padding: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// 投稿詳細ページ
+.show-post-page {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  background-color: #f4f8fa;
+  .user-profile {
+    height: 100vh;
+    position: sticky;
+    align-self: flex-start;
+    top: 100px;
+    background-color: white;
+    width: 30%;
+    padding: 40px;
+    &__icon {
+      // border: 2px solid;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 32px;
+      &__show {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        vertical-align: bottom;
+      }
+    }
+    &__info {
+      &__name {
+        text-align: center;
+        padding-bottom: 16px;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
+      }
+      &__fee {
+        padding: 16px 0 12px 44px;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
+      }
+      &__score {
+        padding: 16px 0 12px 44px;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
+      }
+    }
+  }
+
+  .user-appeal {
+    background-color: white;
+    width: 55%;
+    .post__title {
+      padding: 8px 0;
+      text-align: center;
+      background-color: paleturquoise;
+      font-size: 40px;
+      font-weight: 900;
+    }
+    .post__content {
+      padding: 16px;
+      text-align: left;
+      font-size: 20px;
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+// 投稿編集ページ
+.edit-post-page {
+
+  .content__title {
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 30px;
+    text-align: center;
+    }
+  
+  .form {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto 100px;
+    padding-top: 30px;
+    &__title {
+      display: block;
+      width: 95%;
+      height: 50px;
+      padding: 6px 12px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    &__text {
+      display: block;
+      width: 95%;
+      height: 500px;
+      margin-top: 15px;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      resize: none;
+    }
+    &__fee {
+      display: block;
+      width: 95%;
+      height: 50px;
+      margin-top: 15px;
+      padding: 6px 12px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+    &__btn {
+      display: block;
+      width: 75%;
+      margin: 30px auto 30px;
+      padding: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+=======
+a {
+  text-decoration: none;
+>>>>>>> Stashed changes
+>>>>>>> master
 }

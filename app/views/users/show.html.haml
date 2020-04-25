@@ -5,27 +5,27 @@
 
     .left-menu
       %ul.left-menu__lists
-        %li
-          = link_to "トップページ", root_path
-        %li
-          %a ユーザー情報編集
-        %li
+        %li.left-menu__lists__list
+          = link_to "トップページ", root_path, class: "left-menu__lists__list__link"
+        %li.left-menu__lists__list
+          = link_to "ユーザー情報編集", edit_user_registration_path(current_user), class: "left-menu__lists__list__link"
+        %li.left-menu__lists__list
           %a メッセージ
-        %li
+        %li.left-menu__lists__list
           %a やることリスト
-        %li
+        %li.left-menu__lists__list
           %a あなたのメンティー
-        %li
+        %li.left-menu__lists__list
           %a あなたのメンター
-        %li
+        %li.left-menu__lists__list
           %a プロフィール編集
-        %li
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
+        %li.left-menu__lists__list
+          = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"left-menu__lists__list__link"
 
     .right-profile
       .right-profile__header
         名前: ステハゲさん
-      .right-profile__info 事務局からのお知らせ
+      %h2.right-profile__info お知らせ
       %ul.info-all
         %li.info-all__list
           .info-all__list__wrapper
@@ -40,7 +40,23 @@
             .info-message お知らせ3
             .info-time 4月21日 00:00
 
-      .right-profile__messeges 新着メッセージ
+      .right-profile__messages 新着メッセージ
+      %ul.messages-all
+        %li.messages-all__list
+          .messages-all__list__wrapper
+            .message-username スーツさん
+            .message-text お知らせ 1
+            .message-time 4月19日 00:00
+        %li.messages-all__list
+          .messages-all__list__wrapper
+            .message-username スーツさん
+            .message-text お知らせ2
+            .message-time 4月20日 00:00
+        %li.messages-all__list
+          .messages-all__list__wrapper
+            .message-username スーツさん
+            .message-text お知らせ3
+            .message-time 4月21日 00:00
 
 
 = render partial: "posts/top-footer"

@@ -2,6 +2,97 @@
   width: 100%;
   margin-top: 100px;
   &__header {
-    
+    display: flex;
+    justify-content: space-between;
+
+    .left-menu {
+      width: 30%;
+      margin: 80px 0 40px 80px;
+      &__lists {
+        list-style: none;
+        &__list {
+          color: #555;
+          height: 40px;
+          line-height: 40px;
+          padding-left: 20px;
+          background-color: #ddd;
+          box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+          &__link {
+            color: #555;
+            display: block;
+          }
+          &:hover{
+            background-color: #aaa;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .right-profile {
+      width: 50%;
+      margin: 40px 80px 40px 0;
+      &__header {
+        height: 60px;
+        text-align: center;
+        font-size: 24px;
+        border-bottom: 2px solid #ea352d;
+      }
+      &__info {
+        height: 64px;
+        line-height: 64px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .info-all {
+        &__list {
+          border-bottom: 1px solid #eee;
+          &__wrapper {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            padding: 0 16px 0 64px;
+            
+            .info-message {
+              font-size: 16px;
+            }
+            .info-time {
+              font-size: 14px;
+              color: #888;
+              text-align: right;
+            }
+          }
+        }
+      }
+      &__messages {
+        height: 64px;
+        line-height: 64px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 16px;
+      }
+      .messages-all {
+        
+        &__list {
+          border-bottom: 1px solid #eee;
+          margin-bottom: 16px;
+          &__wrapper {
+            padding: 0 16px 0 64px;
+            margin: 16px 0;
+            .message-username {
+              font-size: 16px;
+              text-align: left;
+            }
+            .message-text {
+              font-size: 16px;
+              text-align: left;
+            }
+            .message-time {
+              font-size: 14px;
+              color: #888;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
   }
 }
