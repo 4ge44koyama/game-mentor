@@ -1,0 +1,30 @@
+= render partial: "posts/top-header"
+
+.new-user-background
+  .new-user-register
+    %h2.new ユーザー新規登録
+    = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .field_new
+        = f.label :name, "ニックネーム"
+        %br/
+        = f.text_field :name, class: "input-field", autofocus: true
+      .field_new
+        = f.label :email, "メールアドレス"
+        %br/
+        = f.email_field :email, class: "input-field", autofocus: true, autocomplete: "email"
+      .field_new
+        = f.label :password, "パスワード"
+        - if @minimum_password_length
+          %em
+            (最低6文字以上)
+        %br/
+        = f.password_field :password, class: "input-field", autocomplete: "new-password"
+      .field_new
+        = f.label :password_confirmation, "パスワード(確認)"
+        %br/
+        = f.password_field :password_confirmation, class: "input-field", autocomplete: "new-password"
+      .actions_new
+        = f.submit "新規登録", class: "register-btn"
+
+= render partial: "posts/top-footer"
