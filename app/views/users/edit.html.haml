@@ -15,16 +15,26 @@
             名前:
           .edit-user-profile__info__name__box
             = f.text_field :name, class: "edit-user-name-box"
-        .edit-user-profile__info__fee
-          料金: #{@find_post.fee}
+        - if @find_post.present?
+          .edit-user-profile__info__fee
+            料金: #{@find_post.fee}
+        - else
+          .edit-user-profile__info__fee
+            料金: まだ投稿がありません
         .edit-user-profile__info__score
           評価: ★★★★★(10)
         .edit-user-profile__info__submit
           = f.submit "変更する", class: "edit-user-profile__info__submit__btn"
   .edit-user-appeal
-    .edit-user-post__title
-      = @find_post.title if @find_post.present?
-    .edit-user-post__content
-      = simple_format @find_post.content if @find_post.present?
+    - if @find_post.present?
+      .edit-user-post__title
+        = @find_post.title
+      .edit-user-post__content
+        = simple_format @find_post.content
+    - else
+      .edit-user-post__title
+        まだ投稿がありません
+      .edit-user-post__content
+        メニューから投稿をしよう！
 
 = render partial: "posts/top-footer"
