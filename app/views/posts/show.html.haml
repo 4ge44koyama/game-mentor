@@ -3,17 +3,28 @@
   .user-profile
     .user-profile__icon
       .user-profile__icon__cover
-      = image_tag 'sutehage', class: 'user-profile__icon__show'
+      - if @a_post.user.image.present?
+        = image_tag @a_post.user.image.url, class: 'user-profile__icon__show'
+      - else
+        = image_tag 'default-user-image', class: 'user-profile__icon__show'
     .user-profile__info
       .user-profile__info__name
-        名前: #{@post.user.name}
+        名前: #{@a_post.user.name}
       .user-profile__info__fee
-        料金: #{@post.fee}
+        料金: #{@a_post.fee}
       .user-profile__info__score
         評価: ★★★★★(10)
   .user-appeal
     .post__title
-      = @post.title
+      = @a_post.title
     .post__content
-      = simple_format @post.content
+      = simple_format @a_post.content
+
+- if user_signed_in? && current_user.id == @a_post.user_id
+  .edit-and-destroy-links 
+    = link_to "プロフィールを編集する", edit_user_path(current_user.id), class:"edit-and-destroy-links__link"
+    = link_to "投稿内容を編集する", edit_post_path(@a_post.id), class:"edit-and-destroy-links__link"
+    = link_to "投稿を削除する", post_path, method: :delete, class:"edit-and-destroy-links__link"
+
+
 = render partial: "top-footer"

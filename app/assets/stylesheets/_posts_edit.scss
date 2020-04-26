@@ -1,52 +1,100 @@
 .edit-post-page {
-
+  margin-top: 100px;
+  background-color: #f4f8fa;
   .content__title {
-    padding: 10px;
+    padding: 32px 0 0;
     font-size: 30px;
     font-weight: bold;
-    padding-top: 30px;
     text-align: center;
     }
   
-  .form {
-    width: 85%;
+  .edit-post-page__flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+
+    .user-profile {
+      align-self: flex-start;
+      background-color: white;
+      width: 30%;
+      padding: 40px;
+      &__icon {
+        // border: 2px solid;
+        padding: 16px;
+        text-align: center;
+        margin-bottom: 32px;
+        &__show {
+          border-radius: 50%;
+          height: 200px;
+          width: 200px;
+          vertical-align: bottom;
+        }
+      }
+      &__info {
+        &__name {
+          text-align: center;
+          padding-bottom: 16px;
+          font-size: 20px;
+          font-weight: bold;
+          border-bottom: 1px solid gray;
+        }
+        &__fee {
+          padding: 16px 0 12px 44px;
+          font-size: 18px;
+          font-weight: bold;
+          border-bottom: 1px solid gray;
+        }
+        &__score {
+          padding: 16px 0 12px 44px;
+          font-size: 18px;
+          font-weight: bold;
+          border-bottom: 1px solid gray;
+        }
+      }
+    }
+  }
+  .post-edit-form {
+    width: 55%;
     height: 100%;
-    margin: 0 auto 100px;
-    padding-top: 30px;
-    &__title {
-      display: block;
-      width: 95%;
-      height: 50px;
-      padding: 6px 12px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-    }
-    &__text {
-      display: block;
-      width: 95%;
-      height: 500px;
-      margin-top: 15px;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      resize: none;
-    }
-    &__fee {
-      display: block;
-      width: 95%;
-      height: 50px;
-      margin-top: 15px;
-      padding: 6px 12px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-    }
-    &__btn {
-      display: block;
-      width: 75%;
-      margin: 30px auto 30px;
-      padding: 16px;
-      border-radius: 10px;
-      cursor: pointer;
+
+    .form {
+      height: 100%;
+      &__title {
+        display: block;
+        width: 95%;
+        height: 50px;
+        padding: 6px 12px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+      &__text {
+        display: block;
+        width: 95%;
+        height: 500px;
+        margin-top: 15px;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        resize: none;
+        letter-spacing: 0.1rem;
+      }
+      &__fee {
+        display: block;
+        width: 95%;
+        height: 50px;
+        margin-top: 15px;
+        padding: 6px 12px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+      &__btn {
+        display: block;
+        width: 75%;
+        margin: 30px auto 30px;
+        padding: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
     }
   }
 }

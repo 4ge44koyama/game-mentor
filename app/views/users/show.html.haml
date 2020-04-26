@@ -18,13 +18,13 @@
         %li.left-menu__lists__list
           %a あなたのメンター
         %li.left-menu__lists__list
-          %a プロフィール編集
+          = link_to "プロフィール編集", edit_user_path(current_user.id), class:"left-menu__lists__list__link"
         %li.left-menu__lists__list
           = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"left-menu__lists__list__link"
 
     .right-profile
       .right-profile__header
-        名前: ステハゲさん
+        名前: #{current_user.name} さん
       %h2.right-profile__info お知らせ
       %ul.info-all
         %li.info-all__list

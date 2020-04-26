@@ -1,0 +1,30 @@
+= render partial: "posts/top-header"
+.edit-user-page
+  .edit-user-profile
+    = form_with model: @user do |f|
+      .edit-user-profile__icon
+        - if @user.image.present?
+          = image_tag @user.image.url, class: "edit-user-profile__icon__show"
+        - else
+          = image_tag "default-user-image", class: "edit-user-profile__icon__show"
+      .image-file__field
+        = f.file_field :image, class: "image-file"
+      .edit-user-profile__info
+        .edit-user-profile__info__name
+          .edit-user-profile__info__name__label
+            名前:
+          .edit-user-profile__info__name__box
+            = f.text_field :name, class: "edit-user-name-box"
+        .edit-user-profile__info__fee
+          料金: #{@find_post.fee}
+        .edit-user-profile__info__score
+          評価: ★★★★★(10)
+        .edit-user-profile__info__submit
+          = f.submit "変更する", class: "edit-user-profile__info__submit__btn"
+  .edit-user-appeal
+    .edit-user-post__title
+      = @find_post.title if @find_post.present?
+    .edit-user-post__content
+      = simple_format @find_post.content if @find_post.present?
+
+= render partial: "posts/top-footer"
