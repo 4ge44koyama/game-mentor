@@ -1,8 +1,24 @@
+= render partial: "top-header"
 .edit-post-page
   .content__title
     メンター記事の編集
-  = form_with model: @post, class: :form, local: true do |form|
-    = form.text_field :title, placeholder: :アピール文, class: :form__title
-    = form.text_area :content, placeholder: :得意ジャンルや指導内容など, class: :form__text
-    = form.text_field :fee, placeholder: :料金, class: :form__fee
-    = form.submit '編集する', class: :form__btn
+  .edit-post-page__flex
+    .user-profile
+      .user-profile__icon
+        .user-profile__icon__cover
+        = image_tag 'sutehage', class: 'user-profile__icon__show'
+      .user-profile__info
+        .user-profile__info__name
+          名前: #{@a_post.user.name}
+        .user-profile__info__fee
+          料金: #{@a_post.fee}
+        .user-profile__info__score
+          評価: ★★★★★(10)
+          
+    .post-edit-form
+      = form_with model: @a_post, class: :form, local: true do |form|
+        = form.text_field :title, placeholder: :アピール文, class: :form__title
+        = form.text_area :content, placeholder: :得意ジャンルや指導内容など, class: :form__text
+        = form.text_field :fee, placeholder: :料金, class: :form__fee
+        = form.submit '編集する', class: :form__btn
+= render partial: "top-footer"

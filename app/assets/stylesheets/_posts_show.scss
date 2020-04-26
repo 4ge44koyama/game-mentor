@@ -64,3 +64,19 @@
     }
   }
 }
+.edit-and-destroy-links {
+  width: 100%;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  &__link {
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    margin: 24px 80px;
+    padding: 0 12px;
+    background-color: white;
+    color: orange;
+    border: 1px solid #fcc9ac;
+  }
+}

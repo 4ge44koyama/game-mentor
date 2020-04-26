@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
   
   def index
     @posts = Post.includes(:user)
@@ -18,11 +20,13 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    if user_signed_in?
+    else
+      redirect_to new_user_registration_path
+    end
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
@@ -32,14 +36,20 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:id])
-    post.destroy
-    redirect_to root_path
+    if @a_post.destroy
+      redirect_to root_path, notice: '商品情報を削除しました'
+    else
+      render :show, notice: '商品情報が削除できませんでした'
+    end
   end
 
   private
   def post_params
     params.require(:post).permit(:title, :content, :fee).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @a_post = Post.find(params[:id])
   end
 
 end
