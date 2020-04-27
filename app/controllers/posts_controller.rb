@@ -7,7 +7,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    if nil == Post.find_by(user_id: current_user.id)
+      @post = Post.new
+    else
+      redirect_to edit_post_path(current_user.post.id), method: :get
+    end
   end
 
   def create

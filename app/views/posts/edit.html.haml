@@ -6,7 +6,10 @@
     .user-profile
       .user-profile__icon
         .user-profile__icon__cover
-        = image_tag 'sutehage', class: 'user-profile__icon__show'
+          - if @a_post.user.image.present?
+            = image_tag @a_post.user.image.url, class: 'user-profile__icon__show'
+          - else
+            = image_tag 'default-user-image', class: 'user-profile__icon__show'
       .user-profile__info
         .user-profile__info__name
           名前: #{@a_post.user.name}

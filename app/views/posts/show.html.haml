@@ -18,13 +18,16 @@
     .post__title
       = @a_post.title
     .post__content
-      = simple_format @a_post.content
+      = safe_join(@a_post.content.split("\n"),tag(:br))
 
 - if user_signed_in? && current_user.id == @a_post.user_id
   .edit-and-destroy-links 
-    = link_to "プロフィールを編集する", edit_user_path(current_user.id), class:"edit-and-destroy-links__link"
-    = link_to "投稿内容を編集する", edit_post_path(@a_post.id), class:"edit-and-destroy-links__link"
-    = link_to "投稿を削除する", post_path, method: :delete, class:"edit-and-destroy-links__link"
-
+    = link_to "プロフィールを編集する", edit_user_path(current_user.id), class: "edit-and-destroy-links__link"
+    = link_to "投稿内容を編集する", edit_post_path(@a_post.id), class: "edit-and-destroy-links__link"
+    = link_to "投稿を削除する", post_path, method: :delete, class: "edit-and-destroy-links__link"
+- else
+  .edit-and-destroy-links
+    = link_to "メッセージで相談してみる", root_path, class: "edit-and-destroy-links__link"
+    = link_to "メンターリクエストを送る", root_path, class: "edit-and-destroy-links__link"
 
 = render partial: "top-footer"
