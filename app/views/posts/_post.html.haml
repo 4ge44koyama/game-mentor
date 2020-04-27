@@ -15,9 +15,12 @@
       .mentor-card__bottom__tags
         タグ:
         %ul
-          %li テスト
-          %li テスト
-          %li テスト
+          - if post.tag_list.first.present?
+            %li #{post.tag_list.first}
+          - if post.tag_list.second.present?
+            %li #{post.tag_list.second}
+          - if post.tag_list.third.present?
+            %li #{post.tag_list.third}
       .mentor-card__bottom__charge
         料金:
         .personal-fee

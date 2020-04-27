@@ -18,6 +18,14 @@
     .post__title
       = @a_post.title
     .post__content
+      .post__content__tag
+        %ul
+          - if @a_post.tag_list.first.present?
+            %li #{@a_post.tag_list.first}
+          - if @a_post.tag_list.second.present?
+            %li #{@a_post.tag_list.second}
+          - if @a_post.tag_list.third.present?
+            %li #{@a_post.tag_list.third}
       = safe_join(@a_post.content.split("\n"),tag(:br))
 
 - if user_signed_in? && current_user.id == @a_post.user_id

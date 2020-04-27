@@ -61,6 +61,24 @@
       text-align: left;
       font-size: 20px;
       letter-spacing: 0.1rem;
+      &__tag {
+        background-color: #f4f8fa;
+        display: flex;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          padding: 8px 0;
+          li {
+            margin-left: 24px;
+            padding: 2px 8px;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            background-color: orange;
+            border-radius: 16px;
+          }
+        }
+      }
     }
   }
 }
@@ -77,6 +95,8 @@
     padding: 0 12px;
     background-color: white;
     color: orange;
+    font-weight: 700;
     border: 1px solid #fcc9ac;
+    border-radius: 8px;
   }
 }

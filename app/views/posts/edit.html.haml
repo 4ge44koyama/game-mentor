@@ -23,5 +23,6 @@
         = form.text_field :title, placeholder: :アピール文, class: :form__title
         = form.text_area :content, placeholder: :得意ジャンルや指導内容など, class: :form__text
         = form.text_field :fee, placeholder: :料金, class: :form__fee
+        = form.text_field :tag_list, placeholder: "タグ (例)PC,PS4,スマホ など、カンマ区切りで最大3つまで", value: @a_post.tag_list.join(','), class: :form__tag
         = form.submit '編集する', class: :form__btn
 = render partial: "top-footer"
