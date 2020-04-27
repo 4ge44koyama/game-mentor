@@ -29,6 +29,35 @@
       }
     }
   }
+  &__search {
+    width: 35%;
+    text-align: center;
+    margin-right: auto;
+    &__box {
+      width: 100%;
+      display: flex;
+      &__input {
+        width: calc( 100% - 36px);
+        height: 36px;
+        padding: 0 0 0 5px;
+      }
+      &__botton {
+        width: 36px;
+        height: 36px;
+        background-color: #f8a779;
+        &__img {
+          border: 1px solid white;
+          height: 100%;
+          &__icon {
+            height: 100%;
+            width: 100%;
+            padding: 2px;
+          }
+        }
+      }
+    }
+  }
+
   &__right {
     display: flex;
     margin-right: 24px;
@@ -36,12 +65,6 @@
     color: white;
     height: 32px;
     line-height: 32px;
-    &__search {
-      width: 240px;
-      border: 1px solid;
-      text-align: center;
-      margin-right: 120px;
-    }
     &__menu {
       margin-right: 24px;
       height: 32px;

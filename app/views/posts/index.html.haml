@@ -3,6 +3,7 @@
 .contents
   - @posts.each do |post|
     = render partial: "post", locals: { post: post }
+= paginate(@posts)
 .touroku
   - if user_signed_in?
   - else

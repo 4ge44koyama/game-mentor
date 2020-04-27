@@ -82,6 +82,17 @@
     }
   }
 }
+.pagination {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+  background-color: whitesmoke;
+  span {
+    margin-right: 8px;
+  }
+}
 
 .touroku {
   height: 160px;
