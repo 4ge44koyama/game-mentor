@@ -30,6 +30,14 @@
       .edit-user-post__title
         = @find_post.title
       .edit-user-post__content
+        .edit-user-post__content__tag
+          %ul
+            - if @find_post.tag_list.first.present?
+              %li #{@find_post.tag_list.first}
+            - if @find_post.tag_list.second.present?
+              %li #{@find_post.tag_list.second}
+            - if @find_post.tag_list.third.present?
+              %li #{@find_post.tag_list.third}
         = simple_format @find_post.content
     - else
       .edit-user-post__title
