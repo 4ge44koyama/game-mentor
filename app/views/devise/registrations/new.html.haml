@@ -27,4 +27,6 @@
       .actions_new
         = f.submit "新規登録", class: "register-btn"
 
+    = link_to "ゲストログインはこちら", users_guest_sign_in_path, class: "guest_user_login", method: :post
+
 = render partial: "posts/top-footer"
