@@ -6,7 +6,7 @@
           - if post.user.image.present?
             = image_tag post.user.image.url, class: 'icon'
           - else
-            = image_tag "default-user-image", class: 'icon'
+            = image_tag "default-user-image.png", class: 'icon'
         .mentor-info__name
           = post.user.name
       .mentor-detail

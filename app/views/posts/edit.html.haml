@@ -9,7 +9,7 @@
           - if @a_post.user.image.present?
             = image_tag @a_post.user.image.url, class: 'user-profile__icon__show'
           - else
-            = image_tag 'default-user-image', class: 'user-profile__icon__show'
+            = image_tag 'default-user-image.png', class: 'user-profile__icon__show'
       .user-profile__info
         .user-profile__info__name
           名前: #{@a_post.user.name}

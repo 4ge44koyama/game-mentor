@@ -6,7 +6,7 @@
         - if @user.image.present?
           = image_tag @user.image.url, class: "edit-user-profile__icon__show"
         - else
-          = image_tag "default-user-image", class: "edit-user-profile__icon__show"
+          = image_tag "default-user-image.png", class: "edit-user-profile__icon__show"
       .image-file__field
         = f.file_field :image, class: "image-file"
       .edit-user-profile__info
