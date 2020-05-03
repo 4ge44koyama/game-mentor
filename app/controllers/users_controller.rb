@@ -7,7 +7,11 @@ class UsersController < ApplicationController
   end
   
   def edit
-    @find_post = Post.find_by(user_id: current_user.id)
+    if user_signed_in? && current_user.id == @user.id
+      @find_post = Post.find_by(user_id: current_user.id)
+    else
+      redirect_to new_user_registration_path, alert: 'ログインをお願いします'
+    end
   end
 
   def update
@@ -24,7 +28,11 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name, :image)
+    if @user.email != 'guest@example.com'
+      params.require(:user).permit(:name, :image)
+    else
+      redirect_to user_path(@user.id), alert: 'ゲストユーザーは編集できません'
+    end
   end
 
 end

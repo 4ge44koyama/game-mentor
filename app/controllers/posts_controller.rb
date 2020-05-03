@@ -10,28 +10,25 @@ class PostsController < ApplicationController
     if nil == Post.find_by(user_id: current_user.id)
       @post = Post.new
     else
-      redirect_to edit_post_path(current_user.post.id), method: :get
+      redirect_to edit_post_path(current_user.post.id), method: :get, alert: '投稿は1人につき1件です'
     end
   end
 
   def create
     @post = Post.create(post_params)
     if @post.save
-      redirect_to post_path @post
+      redirect_to post_path @post, notice: '投稿が完了しました'
     else
-      redirect_to new_post_path
+      redirect_to new_post_path, alert: '投稿が保存できませんでした'
     end  
   end
 
   def show
-    if user_signed_in?
-      
-    else
-      redirect_to new_user_registration_path
-    end
+    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless user_signed_in?
   end
 
   def edit
+    redirect_to new_user_registration_path, alert: 'ログインをお願いします' unless user_signed_in? && current_user.id == @a_post.user_id
   end
 
   def update
@@ -42,9 +39,9 @@ class PostsController < ApplicationController
 
   def destroy
     if @a_post.destroy
-      redirect_to root_path, notice: '商品情報を削除しました'
+      redirect_to root_path, notice: '投稿を削除しました'
     else
-      render :show, notice: '商品情報が削除できませんでした'
+      render :show, notice: '投稿が削除できませんでした'
     end
   end
 

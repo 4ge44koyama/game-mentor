@@ -4,7 +4,6 @@
     = render partial: "post", locals: { post: post }
 = paginate(@posts) if @posts.present?
 .touroku
-  - if user_signed_in?
-  - else
+  - unless user_signed_in?
     .register-link
       = link_to "無料登録", new_user_registration_path, class: "register-link-btn"
