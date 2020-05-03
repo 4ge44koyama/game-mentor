@@ -1,4 +1,3 @@
-= render partial: "top-header"
 .new-post-page
   .content__title
     メンター記事の作成
@@ -9,4 +8,3 @@
       = form.text_field :fee, placeholder: :料金, class: :form__fee
       = form.text_field :tag_list, placeholder: "タグ (例)PC,PS4,スマホ など、カンマ区切りで最大3つまで", value: @post.tag_list.join(','), class: :form__tag
       = form.submit '投稿する', class: :form__btn
-= render partial: "top-footer"

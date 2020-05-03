@@ -1,89 +1,61 @@
-.edit-user-page {
-  margin-top: 100px;
+.show-post-page {
   display: flex;
   justify-content: space-between;
   padding: 60px;
   background-color: #f4f8fa;
-
-  .edit-user-profile {
+  .user-profile {
+    position: sticky;
     align-self: flex-start;
+    top: 100px;
     background-color: white;
     width: 30%;
     padding: 40px;
     &__icon {
+      // border: 2px solid;
       padding: 16px;
-      height: 320px;
-      width: 320px;
       text-align: center;
+      margin-bottom: 32px;
       &__show {
-        object-fit: contain;
-        width: 100%;
-        height: 100%;
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        vertical-align: bottom;
       }
-    }
-    
-    .image-file__field {
-      width: 100%;
-      margin-bottom: 24px;
-      padding-left: 40px;
     }
     &__info {
-
       &__name {
-        display: flex;
-        margin-bottom: 16px;
-        &__label {
-          margin-right: 8px;
-          line-height: 40px;
-        }
-        &__box {
-          height: 40px;
-          width: 80%;
-          
-          .edit-user-name-box {
-            height: 40px;
-            width: 100%;
-          }
-        }
+        text-align: center;
+        padding-bottom: 16px;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
       }
       &__fee {
-        margin-bottom: 16px;
+        padding: 16px 0 12px 44px;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
       }
       &__score {
-        margin-bottom: 16px;
-      }
-      &__submit {
-        text-align: center;
-        &__btn {
-          margin: 0 auto;
-          width: 50%;
-          height: 32px;
-          border-style: none;
-          color: white;
-          background-color: gray;
-          cursor: pointer;
-        }
-        :hover {
-          opacity: 0.6;
-          border: 1px solid black;
-        }
+        padding: 16px 0 12px 44px;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid gray;
       }
     }
   }
 
-  .edit-user-appeal {
+  .user-appeal {
     background-color: white;
     width: 55%;
-    
-    .edit-user-post__title {
+    .post__title {
       padding: 8px 0;
       text-align: center;
       background-color: paleturquoise;
       font-size: 40px;
       font-weight: 900;
     }
-
-    .edit-user-post__content {
+    .post__content {
       padding: 16px;
       text-align: left;
       font-size: 20px;
@@ -108,5 +80,23 @@
         }
       }
     }
+  }
+}
+.edit-and-destroy-links {
+  width: 100%;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  &__link {
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    margin: 24px 80px;
+    padding: 0 12px;
+    background-color: white;
+    color: orange;
+    font-weight: 700;
+    border: 1px solid #fcc9ac;
+    border-radius: 8px;
   }
 }

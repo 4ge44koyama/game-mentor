@@ -1,0 +1,17 @@
+.notification {
+  width: 100%;
+  z-index: 2;
+  .notice {
+    width: 100%;
+    background-color: $light_blue;
+    color: $white;
+    text-align: center;
+  }
+
+  .alert {
+    width: 100%;
+    background-color: $alert_orange;
+    color: $white;
+    text-align: center;
+  }
+}

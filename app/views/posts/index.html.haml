@@ -1,4 +1,3 @@
-= render partial: "top-header"
 = render partial: "site-image"
 .contents
   - @posts.each do |post|
@@ -9,4 +8,3 @@
   - else
     .register-link
       = link_to "無料登録", new_user_registration_path, class: "register-link-btn"
-= render partial: "top-footer"
