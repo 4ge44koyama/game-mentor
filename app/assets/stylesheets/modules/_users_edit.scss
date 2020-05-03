@@ -1,62 +1,88 @@
-.show-post-page {
-  margin-top: 100px;
+.edit-user-page {
   display: flex;
   justify-content: space-between;
   padding: 60px;
   background-color: #f4f8fa;
-  .user-profile {
-    position: sticky;
+
+  .edit-user-profile {
     align-self: flex-start;
-    top: 100px;
     background-color: white;
     width: 30%;
     padding: 40px;
     &__icon {
-      // border: 2px solid;
       padding: 16px;
+      height: 320px;
+      width: 320px;
       text-align: center;
-      margin-bottom: 32px;
       &__show {
-        border-radius: 50%;
-        height: 200px;
-        width: 200px;
-        vertical-align: bottom;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
       }
     }
+    
+    .image-file__field {
+      width: 100%;
+      margin-bottom: 24px;
+      padding-left: 40px;
+    }
     &__info {
+
       &__name {
-        text-align: center;
-        padding-bottom: 16px;
-        font-size: 20px;
-        font-weight: bold;
-        border-bottom: 1px solid gray;
+        display: flex;
+        margin-bottom: 16px;
+        &__label {
+          margin-right: 8px;
+          line-height: 40px;
+        }
+        &__box {
+          height: 40px;
+          width: 80%;
+          
+          .edit-user-name-box {
+            height: 40px;
+            width: 100%;
+          }
+        }
       }
       &__fee {
-        padding: 16px 0 12px 44px;
-        font-size: 18px;
-        font-weight: bold;
-        border-bottom: 1px solid gray;
+        margin-bottom: 16px;
       }
       &__score {
-        padding: 16px 0 12px 44px;
-        font-size: 18px;
-        font-weight: bold;
-        border-bottom: 1px solid gray;
+        margin-bottom: 16px;
+      }
+      &__submit {
+        text-align: center;
+        &__btn {
+          margin: 0 auto;
+          width: 50%;
+          height: 32px;
+          border-style: none;
+          color: white;
+          background-color: gray;
+          cursor: pointer;
+        }
+        :hover {
+          opacity: 0.6;
+          border: 1px solid black;
+        }
       }
     }
   }
 
-  .user-appeal {
+  .edit-user-appeal {
     background-color: white;
     width: 55%;
-    .post__title {
+    
+    .edit-user-post__title {
       padding: 8px 0;
       text-align: center;
       background-color: paleturquoise;
       font-size: 40px;
       font-weight: 900;
     }
-    .post__content {
+
+    .edit-user-post__content {
       padding: 16px;
       text-align: left;
       font-size: 20px;
@@ -81,23 +107,5 @@
         }
       }
     }
-  }
-}
-.edit-and-destroy-links {
-  width: 100%;
-  background-color: orange;
-  display: flex;
-  justify-content: center;
-  &__link {
-    height: 40px;
-    line-height: 40px;
-    display: block;
-    margin: 24px 80px;
-    padding: 0 12px;
-    background-color: white;
-    color: orange;
-    font-weight: 700;
-    border: 1px solid #fcc9ac;
-    border-radius: 8px;
   }
 }

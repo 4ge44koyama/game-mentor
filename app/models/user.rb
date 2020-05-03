@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one :post, dependent: :destroy
+  has_many :requests, dependent: :destroy
   mount_uploader :image, ImageUploader
 
   def self.guest

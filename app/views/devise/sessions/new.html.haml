@@ -1,5 +1,3 @@
-= render partial: "posts/top-header"
-
 .login-user-background
   .login-user-box
     %h2.sessions ログイン
@@ -20,4 +18,3 @@
         = f.submit "ログイン！", class:"user-login-btn"
     = render "devise/shared/links"
     = link_to "ゲストログインはこちら", users_guest_sign_in_path, class: "guest_user_login", method: :post
-= render partial: "posts/top-footer"
