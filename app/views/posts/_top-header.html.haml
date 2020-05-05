@@ -6,7 +6,7 @@
         ゲーミングメンターサービス
   .header__search
     = form_with(url: posts_searches_path, local: true, method: :get, class: "header__search__box") do |form|
-      = form.text_field :keyword, placeholder: "検索", class: "header__search__box__input"
+      = form.text_field :search_tag, placeholder: "タグで検索", class: "header__search__box__input", value: params[:search_tag]
       = button_tag type: 'submit', class: "header__search__box__btn" do
         %i.fas.fa-search
 
