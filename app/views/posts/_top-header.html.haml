@@ -5,12 +5,10 @@
       .logo-home
         ゲーミングメンターサービス
   .header__search
-    .header__search__box
-      %input.header__search__box__input{name: "key", 
-      placeholder: "タグで検索", value: ""}
-      %botton{ class:"header__search__box__botton",type: "submit" }
-        .header__search__box__botton__img
-          = image_tag "icon-search 1.png", class: "header__search__box__botton__img__icon"
+    = form_with(url: posts_searches_path, local: true, method: :get, class: "header__search__box") do |form|
+      = form.text_field :search_tag, placeholder: "タグで検索", class: "header__search__box__input", value: params[:search_tag]
+      = button_tag type: 'submit', class: "header__search__box__btn" do
+        %i.fas.fa-search
 
   .header__right
     - if user_signed_in?

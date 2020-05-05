@@ -6,9 +6,10 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
   root to: 'posts#index'
-  resources :users, only: [:show, :edit, :update]
-  resources :posts, except: :index do
-    resources :requests, only: [:new, :create]
+  namespace :posts do
+    resources :searches
   end
+  resources :users, only: [:show, :edit, :update]
+  resources :posts, except: :index 
 
 end
