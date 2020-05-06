@@ -100,3 +100,25 @@
     border-radius: 8px;
   }
 }
+
+.message-and-request-links {
+  width: 100%;
+  &__form {
+    width: 100%;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    &__link {
+      height: 40px;
+      line-height: 40px;
+      display: block;
+      margin: 24px 80px;
+      padding: 0 12px;
+      background-color: white;
+      color: orange;
+      font-weight: 700;
+      border: 1px solid #fcc9ac;
+      border-radius: 8px;
+    }
+  }
+}

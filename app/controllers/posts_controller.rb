@@ -25,6 +25,8 @@ class PostsController < ApplicationController
 
   def show
     redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless user_signed_in?
+    @search_request = Request.find_by(user_id: current_user.id, to_id: @a_post.user_id)
+    @request = Request.new
   end
 
   def edit

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :searches
   end
   resources :users, only: [:show, :edit, :update]
-  resources :posts, except: :index 
+  resources :posts, except: :index
+  resources :requests, only: [:create, :destroy]
 
 end
