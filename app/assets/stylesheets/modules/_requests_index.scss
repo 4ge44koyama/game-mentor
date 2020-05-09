@@ -1,0 +1,31 @@
+.requests-container {
+  width: 100%;
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+
+    .right-menu {
+      width: 50%;
+      margin: 40px 80px 40px 0;
+      &__header {
+        height: 60px;
+        text-align: center;
+        font-size: 24px;
+        border-bottom: 2px solid #ea352d;
+      }
+      &__requested {
+        height: 64px;
+        line-height: 64px;
+        text-align: center;
+        font-weight: bold;
+      }
+      &__request {
+        height: 64px;
+        line-height: 64px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 16px;
+      }
+    }
+  }
+}

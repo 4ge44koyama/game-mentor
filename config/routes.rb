@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   namespace :posts do
     resources :searches
   end
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update] do
+    resources :requests, only: :index
+  end
+  resources :requests, only: [:create, :update, :destroy]
   resources :posts, except: :index
-  resources :requests, only: [:create, :destroy]
 
 end

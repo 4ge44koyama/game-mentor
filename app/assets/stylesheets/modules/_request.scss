@@ -1,0 +1,25 @@
+.request-lists {
+        
+  &__list {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 16px;
+    &__wrapper {
+      padding: 0 16px 0 64px;
+      margin: 16px 0;
+      
+      .request-to {
+        font-size: 16px;
+        text-align: left;
+      }
+      .request-status {
+        font-size: 14px;
+        text-align: left;
+      }
+      .sent-time {
+        font-size: 14px;
+        color: #888;
+        text-align: right;
+      }
+    }
+  }
+}

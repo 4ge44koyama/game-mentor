@@ -1,0 +1,9 @@
+%li.request-lists__list
+  .request-lists__list__wrapper
+    .request-to
+      = request.to_user.name
+    .request-status
+      状態:
+      = request.status_check
+    .sent-time
+      = request.created_at.strftime("%Y年%m月%d日 %H時%M分")
