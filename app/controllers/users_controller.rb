@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :user_params, only: :update
 
   def show
+    @latest_messages = Message.where(to_id: current_user.id).order("created_at DESC").page(params[:page]).per(6)
   end
   
   def edit
@@ -20,6 +21,13 @@ class UsersController < ApplicationController
     else
       render :edit, notice: 'プロフィールの編集ができません'
     end
+  end
+
+  def mentor
+    
+  end
+
+  def mentee
   end
 
   private

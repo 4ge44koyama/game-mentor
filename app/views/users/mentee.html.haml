@@ -19,8 +19,3 @@
           .info-all__list__wrapper
             .info-message お知らせ 3
             .info-time 4月21日 00:00
-
-      .right-profile__messages 新着メッセージ
-      %ul.messages-all
-        - @latest_messages.each do |list|
-          = render partial: "/users/latest_messages", locals: { message: list}

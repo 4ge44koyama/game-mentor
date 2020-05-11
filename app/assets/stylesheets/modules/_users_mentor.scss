@@ -1,0 +1,32 @@
+.right-profile__mentor {
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mentor-all {
+
+  &__list {
+    border-bottom: 1px solid #eee;
+    &__wrapper {
+
+      .mentor-name {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        padding: 0 16px 0 64px;
+        display: block;  
+      }
+      .mentor-icon {
+        height: 64px;
+        width: 64px;
+      }
+      .mentor-tags {
+
+      }
+      .mentor-fee {
+
+      }
+    }
+  }
+}

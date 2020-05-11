@@ -1,0 +1,26 @@
+.mypage-container
+  .mypage-container__flex
+    = render partial: "/users/left_menu"
+
+    .right-messages
+      .right-messages__header
+        名前: #{current_user.name} さん
+      %h2.right-messages__recieved 届いているメッセージ
+      %ul.recieved-lists
+        %li.recieved-lists__list
+          .recieved-lists__list__wrapper
+            .recieved-lists-from
+              = @respond_message.user.name
+              %span さんから
+            .recieved-lists-content
+              = @respond_message.content
+            .recieved-lists-time
+              = @respond_message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+
+  .respond-message-form
+    %a.respond-message-form__guide #{@respond_message.user.name}さんへの返信はこちら
+    .respond-message-form__margin
+      = form_with model: @message, class: "message-form__box", local: true do |form|
+        = form.text_field :content, placeholder: "#{@respond_message.user.name}さんへ", class: "message-form__box__content"
+        = form.hidden_field :to_id, value: @respond_message.user.id
+        = form.submit '送信', class: "message-form__box__btn"

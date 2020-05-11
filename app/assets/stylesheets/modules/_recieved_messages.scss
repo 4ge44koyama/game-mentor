@@ -1,0 +1,34 @@
+.recieved-lists {
+
+  &__list {
+    border-bottom: 1px solid #eee;
+    &__wrapper {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      padding: 0 16px 0 64px;
+      display: block;
+      
+      .recieved-lists-from {
+        font-size: 16px;
+      }
+      .recieved-lists-content {
+        font-size: 14px;
+        text-align: left;
+        margin: 8px 0;
+      }
+      .recieved-lists-time {
+        font-size: 14px;
+        color: #888;
+        text-align: right;
+      }
+      .respond_link {
+        padding: 4px 8px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color: rgb(0, 174, 255);
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

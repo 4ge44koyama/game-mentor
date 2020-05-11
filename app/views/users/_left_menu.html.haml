@@ -3,16 +3,16 @@
     %li.left-menu__lists__list
       = link_to "トップページ", root_path, class: "left-menu__lists__list__link"
     %li.left-menu__lists__list
-      = link_to "ユーザー情報編集", edit_user_registration_path(current_user), class: "left-menu__lists__list__link"
-    %li.left-menu__lists__list
-      %a メッセージ
+      = link_to "メッセージ一覧", user_messages_path(current_user), method: :get, class: "left-menu__lists__list__link"
     %li.left-menu__lists__list
       = link_to "リクエスト一覧", user_requests_path(current_user), class: "left-menu__lists__list__link"
     %li.left-menu__lists__list
-      %a あなたのメンティー
+      = link_to "あなたのメンター", mentor_user_path(current_user), class: "left-menu__lists__list__link"
     %li.left-menu__lists__list
-      %a あなたのメンター
+      = link_to "あなたのメンティー", mentee_user_path(current_user), class: "left-menu__lists__list__link"
     %li.left-menu__lists__list
       = link_to "プロフィール編集", edit_user_path(current_user), class:"left-menu__lists__list__link"
+    %li.left-menu__lists__list
+      = link_to "ユーザー情報編集", edit_user_registration_path(current_user), class: "left-menu__lists__list__link"
     %li.left-menu__lists__list
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"left-menu__lists__list__link"

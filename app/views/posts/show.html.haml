@@ -35,10 +35,16 @@
 - else
   .message-and-request-links
     .message-and-request-links__form
-      = link_to "メッセージで相談してみる", root_path, class: "message-and-request-links__form__link"
       - if @search_request.present?
         = link_to "メンターリクエストを取り消す", request_path(@search_request.id), method: :delete, class: "message-and-request-links__form__link", data: { confirm: "メンターリクエストを取り消しますか??" }
       - else
         = form_with model: @request, local: true do |form|
           = form.hidden_field :to_id, value: @a_post.user_id
           = form.submit "メンターリクエストを送る", class: "message-and-request-links__form__link", data: { confirm: "#{@a_post.user.name}さんにメンターリクエストを送信しますか??" }
+    .message-form
+      %a.message-form__guide #{@a_post.user.name}さんへのメッセージはこちら
+      .message-form__margin
+        = form_with model: @message, class: "message-form__box", local: true do |form|
+          = form.text_field :content, placeholder: "#{@a_post.user.name}さんへ", class: "message-form__box__content"
+          = form.hidden_field :to_id, value: @a_post.user.id
+          = form.submit '送信', class: "message-form__box__btn"

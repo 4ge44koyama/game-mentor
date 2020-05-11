@@ -1,0 +1,26 @@
+.sent-lists {
+
+  &__list {
+    border-bottom: 1px solid #eee;
+    &__wrapper {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      padding: 0 16px 0 64px;
+      display: block;
+      
+      .sent-lists-from {
+        font-size: 16px;
+      }
+      .sent-lists-content {
+        font-size: 14px;
+        text-align: left;
+        margin: 8px 0;
+      }
+      .sent-lists-time {
+        font-size: 14px;
+        color: #888;
+        text-align: right;
+      }
+    }
+  }
+}

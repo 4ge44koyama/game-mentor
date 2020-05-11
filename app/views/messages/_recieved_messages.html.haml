@@ -1,0 +1,10 @@
+%li.recieved-lists__list
+  .recieved-lists__list__wrapper
+    .recieved-lists-from
+      = recieved_message.user.name
+      %span さんから
+    .recieved-lists-content
+      = recieved_message.content
+    .recieved-lists-time
+      = recieved_message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    = link_to "返信する", user_message_path(current_user, recieved_message.id), class: "respond_link"

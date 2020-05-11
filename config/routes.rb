@@ -11,8 +11,14 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show, :edit, :update] do
     resources :requests, only: :index
+    resources :messages, only: [:index, :show]
+    member do
+      get 'mentor', to: 'users#mentor'
+      get 'mentee', to: 'users#mentee'
+    end
+
   end
   resources :requests, only: [:create, :update, :destroy]
   resources :posts, except: :index
-
+  resources :messages, only: :create
 end
