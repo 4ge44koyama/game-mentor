@@ -100,3 +100,62 @@
     border-radius: 8px;
   }
 }
+
+.message-and-request-links {
+  width: 100%;
+  background-color: orange;
+  padding-bottom: 16px;
+  &__form {
+    width: 100%;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    &__link {
+      height: 40px;
+      line-height: 40px;
+      display: block;
+      margin: 24px 80px;
+      padding: 0 12px;
+      background-color: white;
+      color: orange;
+      font-weight: 700;
+      border: 1px solid #fcc9ac;
+      border-radius: 8px;
+    }
+  }
+
+  .message-form {
+    width: 55%;
+    margin: 0 auto;
+    background-color: orange;
+    &__guide {
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    &__margin {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      
+      .message-form__box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        &__content {
+          width: 90%;
+          height: 40px;
+          margin-right: auto;
+        }
+        &__btn {
+          width: 9%;
+          height: 40px;
+          border: 1px solid;
+          cursor: pointer;
+          color: white;
+          background-color: rgb(163, 159, 159);
+        }
+      }
+    }
+  }
+}

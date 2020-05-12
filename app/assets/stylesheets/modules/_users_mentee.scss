@@ -1,0 +1,38 @@
+.right-profile__mentee {
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mentee-all {
+
+  &__list {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 24px;
+    &__wrapper {
+      display: flex;
+      padding-bottom: 8px;
+      &__user {
+        width: 40%;
+        text-align: center;
+        .mentee-icon {
+          width: 25%;
+          margin: 0 auto;
+          &__img {
+            object-fit: contain;
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .mentee-name {
+          width: fit-content;
+          margin: 0 auto;
+          margin-top: 8px;
+          display: block;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

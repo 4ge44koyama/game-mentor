@@ -1,0 +1,9 @@
+%li.messages-all__list
+  .messages-all__list__wrapper
+    .message-username
+      = message.user.name
+      %span さんから
+    .message-text
+      = message.content
+    .message-time
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")

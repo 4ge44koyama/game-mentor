@@ -1,32 +1,9 @@
 .mypage-container {
   width: 100%;
-  &__header {
+  &__flex {
     display: flex;
     justify-content: space-between;
-
-    .left-menu {
-      width: 30%;
-      margin: 80px 0 40px 80px;
-      &__lists {
-        list-style: none;
-        &__list {
-          color: #555;
-          height: 40px;
-          line-height: 40px;
-          padding-left: 20px;
-          background-color: #ddd;
-          box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
-          &__link {
-            color: #555;
-            display: block;
-          }
-          &:hover{
-            background-color: #aaa;
-            cursor: pointer;
-          }
-        }
-      }
-    }
+    margin-bottom: 40px;
     .right-profile {
       width: 50%;
       margin: 40px 80px 40px 0;
@@ -81,8 +58,9 @@
               text-align: left;
             }
             .message-text {
-              font-size: 16px;
+              font-size: 14px;
               text-align: left;
+              margin: 8px 0;
             }
             .message-time {
               font-size: 14px;

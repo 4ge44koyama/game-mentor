@@ -1,0 +1,11 @@
+.mypage-container
+  .mypage-container__flex
+    = render partial: "left_menu"
+
+    .right-profile
+      .right-profile__header
+        名前: #{current_user.name} さん
+      %h2.right-profile__mentor あなたのメンター
+      %ul.mentor-all
+        - @permitted_requests.each do |list|
+          = render partial: "/users/mentor", locals: { mentor: list }

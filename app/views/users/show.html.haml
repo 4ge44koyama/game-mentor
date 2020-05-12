@@ -1,24 +1,6 @@
 .mypage-container
-  .mypage-container__header
-
-    .left-menu
-      %ul.left-menu__lists
-        %li.left-menu__lists__list
-          = link_to "トップページ", root_path, class: "left-menu__lists__list__link"
-        %li.left-menu__lists__list
-          = link_to "ユーザー情報編集", edit_user_registration_path(current_user), class: "left-menu__lists__list__link"
-        %li.left-menu__lists__list
-          %a メッセージ
-        %li.left-menu__lists__list
-          %a やることリスト
-        %li.left-menu__lists__list
-          %a あなたのメンティー
-        %li.left-menu__lists__list
-          %a あなたのメンター
-        %li.left-menu__lists__list
-          = link_to "プロフィール編集", edit_user_path(current_user.id), class:"left-menu__lists__list__link"
-        %li.left-menu__lists__list
-          = link_to "ログアウト", destroy_user_session_path, method: :delete, class:"left-menu__lists__list__link"
+  .mypage-container__flex
+    = render partial: "left_menu"
 
     .right-profile
       .right-profile__header
@@ -31,27 +13,14 @@
             .info-time 4月19日 00:00
         %li.info-all__list
           .info-all__list__wrapper
-            .info-message お知らせ2
+            .info-message お知らせ 2
             .info-time 4月20日 00:00
         %li.info-all__list
           .info-all__list__wrapper
-            .info-message お知らせ3
+            .info-message お知らせ 3
             .info-time 4月21日 00:00
 
       .right-profile__messages 新着メッセージ
       %ul.messages-all
-        %li.messages-all__list
-          .messages-all__list__wrapper
-            .message-username スーツさん
-            .message-text お知らせ 1
-            .message-time 4月19日 00:00
-        %li.messages-all__list
-          .messages-all__list__wrapper
-            .message-username スーツさん
-            .message-text お知らせ2
-            .message-time 4月20日 00:00
-        %li.messages-all__list
-          .messages-all__list__wrapper
-            .message-username スーツさん
-            .message-text お知らせ3
-            .message-time 4月21日 00:00
+        - @latest_messages.each do |list|
+          = render partial: "/users/latest_messages", locals: { message: list}

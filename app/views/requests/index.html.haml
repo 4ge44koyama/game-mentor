@@ -1,0 +1,19 @@
+.requests-container
+  .requests-container__flex
+
+    = render partial: "users/left_menu"
+
+    .right-menu
+      .right-menu__header
+        名前: #{current_user.name} さん
+      %h2.right-menu__requested あなたへ届いてるリクエスト
+      %ul.requested-lists
+      
+        - @requested_lists.each do |list|
+          = render partial: "/requests/requested", locals: { requested: list}
+
+      %h2.right-menu__request あなたが送ったリクエスト
+      %ul.request-lists
+
+        - @request_lists.each do |list|
+          = render partial: "/requests/request", locals: { request: list}

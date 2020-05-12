@@ -1,0 +1,10 @@
+%li.requested-lists__list
+  .requested-lists__list__wrapper
+    .requested-from
+      = requested.user.name
+    .requested-status
+      状態:
+      = requested.check_status
+    .recieved-time
+      = requested.created_at.strftime("%Y年%m月%d日 %H時%M分")
+    = link_to "承認する", request_path(requested.id), method: :put, class: "permit_action", data: { confirm: "メンターリクエストを承認しますか??" } if requested.status == 0

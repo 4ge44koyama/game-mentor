@@ -1,0 +1,18 @@
+.mypage-container
+  .mypage-container__flex
+    = render partial: "/users/left_menu"
+
+    .right-messages
+      .right-messages__header
+        名前: #{current_user.name} さん
+      %h2.right-messages__recieved 届いているメッセージ
+      %ul.recieved-lists
+        - @recieved_messages.each do |list|
+          = render partial: "/messages/recieved_messages", locals: { recieved_message: list }
+      = paginate(@recieved_messages) if @recieved_messages.present?
+
+      %h2.right-messages__sent 送信したメッセージ
+      %ul.sent-lists
+        - @sent_messages.each do |list|
+          = render partial: "/messages/sent_messages", locals: { sent_message: list }
+      = paginate(@sent_messages) if @sent_messages.present?
