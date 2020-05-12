@@ -5,17 +5,7 @@
     .right-profile
       .right-profile__header
         名前: #{current_user.name} さん
-      %h2.right-profile__info お知らせ
-      %ul.info-all
-        %li.info-all__list
-          .info-all__list__wrapper
-            .info-message お知らせ 1
-            .info-time 4月19日 00:00
-        %li.info-all__list
-          .info-all__list__wrapper
-            .info-message お知らせ 2
-            .info-time 4月20日 00:00
-        %li.info-all__list
-          .info-all__list__wrapper
-            .info-message お知らせ 3
-            .info-time 4月21日 00:00
+      %h2.right-profile__mentee あなたのメンティー
+      %ul.mentee-all
+        - @permit_requests.each do |list|
+          = render partial: "/users/mentee", locals: { mentee: list }

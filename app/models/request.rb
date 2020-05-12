@@ -3,10 +3,10 @@ class Request < ApplicationRecord
   validates :user_id, :to_id, :status, presence: true
 
   def to_user
-    return User.find_by(id: self.to_id)
+    return User.find(self.to_id)
   end
 
-  def status_check
+  def check_status
     if self.status == 0
       return "保留中"
     elsif self.status == 1
@@ -14,6 +14,10 @@ class Request < ApplicationRecord
     else
       return "却下"
     end
+  end
+
+  def search_post
+    return Post.find_by(user_id: self.to_id)
   end
 
 end

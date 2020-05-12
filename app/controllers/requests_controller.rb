@@ -16,8 +16,8 @@ class RequestsController < ApplicationController
   end
 
   def update
-    request = Request.find_by(params[:id])
-    if request.update(status: 1)
+    permit_request = Request.find(params[:id])
+    if permit_request.update(status: 1)
       redirect_to user_requests_path(current_user), notice: 'リクエストを承認しました'
     else
       redirect_to user_requests_path(current_user), alert: 'リクエストの承認に失敗しました'

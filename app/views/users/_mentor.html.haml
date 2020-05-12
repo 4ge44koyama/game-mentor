@@ -1,0 +1,25 @@
+%li.mentor-all__list
+  .mentor-all__list__wrapper
+    .mentor-all__list__wrapper__user
+      .mentor-icon
+        - if mentor.user.image.present?
+          = image_tag mentor.user.image.url, class: "mentor-icon__img"
+        - else
+          = image_tag "default-user-image.png", class: "mentor-icon__img"
+      .mentor-name
+        = link_to "#{mentor.to_user.name}さん", post_path(mentor.search_post.id), method: :get, class: "mentor-name__link"
+
+    .mentor-all__list__wrapper__info
+      .mentor-tags
+        %a 投稿タグ
+        %ul
+          - if mentor.search_post.tag_list.first.present?
+            %li #{mentor.search_post.tag_list.first}
+          - if mentor.search_post.tag_list.second.present?
+            %li #{mentor.search_post.tag_list.second}
+          - if mentor.search_post.tag_list.third.present?
+            %li #{mentor.search_post.tag_list.third}
+      .mentor-fee
+        %a 料金
+      .mentor-fee__text
+        = mentor.search_post.fee

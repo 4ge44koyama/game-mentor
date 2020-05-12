@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
 
+  before_action :move_to_login
+
   def index
     @sent_messages = Message.where(user_id: current_user).order("created_at DESC").page(params[:page]).per(6)
     @recieved_messages = Message.where(to_id: current_user).order("created_at DESC").page(params[:page]).per(6)
@@ -22,8 +24,13 @@ class MessagesController < ApplicationController
 
 
   private
+
   def message_params
     params.require(:message).permit(:content, :to_id).merge(user_id: current_user.id)
+  end
+
+  def move_to_login
+    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless user_signed_in?
   end
 
 end

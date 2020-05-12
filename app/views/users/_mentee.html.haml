@@ -1,0 +1,11 @@
+%li.mentee-all__list
+  .mentee-all__list__wrapper
+    .mentee-all__list__wrapper__user
+      .mentee-icon
+        - if mentee.user.image.present?
+          = image_tag mentee.user.image.url, class: "mentee-icon__img"
+        - else
+          = image_tag "default-user-image.png", class: "mentee-icon__img"
+      .mentee-name
+        = mentee.user.name
+        %span さん

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 
+  before_action :move_to_login, except: :index
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   
   def index
@@ -24,23 +25,23 @@ class PostsController < ApplicationController
   end
 
   def show
-    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless user_signed_in?
     @search_request = Request.find_by(user_id: current_user.id, to_id: @a_post.user_id)
     @request = Request.new
     @message = Message.new
   end
 
   def edit
-    redirect_to new_user_registration_path, alert: 'ログインをお願いします' unless user_signed_in? && current_user.id == @a_post.user_id
+    redirect_to new_user_registration_path, alert: 'ログインをお願いします' unless current_user.id == @a_post.user_id
   end
 
   def update
     post = Post.find(params[:id])
     post.update(post_params)
-    redirect_to post_path(post.id)
+    redirect_to post_path(post.id), notice: '変更を保存しました'
   end
 
   def destroy
+    redirect_to new_user_registration_path, alert: 'ログインをお願いします' unless current_user.id == @a_post.user_id
     if @a_post.destroy
       redirect_to root_path, notice: '投稿を削除しました'
     else
@@ -55,6 +56,10 @@ class PostsController < ApplicationController
 
   def set_post
     @a_post = Post.find(params[:id])
+  end
+
+  def move_to_login
+    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless user_signed_in?
   end
 
 end
