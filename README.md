@@ -4,13 +4,13 @@
 
 ## App URL
 
-<br>
+
 ## Usage
 
-<br>
+
 ### 簡単ログイン機能
-ログインまたは新規登録の画面からゲストユーザーとしてログインできます
-<br>
+#### ログインまたは新規登録の画面からゲストユーザーとしてログインできます
+
 # Features
 #### -記事投稿-
 [![Image from Gyazo](https://i.gyazo.com/f27e7d6cdab0a38c5d6ca82764c680e1.gif)](https://gyazo.com/f27e7d6cdab0a38c5d6ca82764c680e1)
