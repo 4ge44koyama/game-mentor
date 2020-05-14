@@ -1,6 +1,6 @@
 # G-MEN
 ### ゲーミングメンターサービス
-[![App_Image](https://i.gyazo.com/503af6cbf9fd4f34c8cf50da7665da50.gif)]
+![App_Image](https://i.gyazo.com/503af6cbf9fd4f34c8cf50da7665da50.gif)
 
 ## App URL
 
@@ -13,25 +13,25 @@
 
 # Features
 #### -記事投稿-
-[![Image from Gyazo](https://i.gyazo.com/f27e7d6cdab0a38c5d6ca82764c680e1.gif)]
+![Post_demo](https://i.gyazo.com/f27e7d6cdab0a38c5d6ca82764c680e1.gif)
 
 #### -記事閲覧-
-[![Image from Gyazo](https://i.gyazo.com/2fca4d822b86836dda3f352e5ac67a78.gif)]
+![Show_post_demo](https://i.gyazo.com/2fca4d822b86836dda3f352e5ac67a78.gif)
 
 #### -メッセージ送信-
-[![Image from Gyazo](https://i.gyazo.com/f254f7fc81f7350ed0e087a7f1e1c837.gif)]
+![Send_message_demo](https://i.gyazo.com/f254f7fc81f7350ed0e087a7f1e1c837.gif)
 
 #### -リクエスト送信-
-[![Image from Gyazo](https://i.gyazo.com/ea38ba82a5e732920af7108342552ef1.gif)]
+![Send_request_demo](https://i.gyazo.com/ea38ba82a5e732920af7108342552ef1.gif)
 
 #### -マイページ機能-
-[![Image from Gyazo](https://i.gyazo.com/488d200e6118a2df91959b4cbb8a002e.gif)]
+![Mypage_demo](https://i.gyazo.com/488d200e6118a2df91959b4cbb8a002e.gif)
 
 #### -メッセージ返信-
-[![Image from Gyazo](https://i.gyazo.com/a6f18de51252114a8c84ec831078b149.gif)]
+![Respond_message_demo](https://i.gyazo.com/a6f18de51252114a8c84ec831078b149.gif)
 
 #### -リクエスト承認-
-[![Image from Gyazo](https://i.gyazo.com/1e598186887725296a8515d770b5a452.gif)]
+![Permit_request_demo](https://i.gyazo.com/1e598186887725296a8515d770b5a452.gif)
 
 #### -ALL-
 
