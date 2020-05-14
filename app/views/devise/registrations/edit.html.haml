@@ -28,5 +28,5 @@
     .user-edit-link
       %p.edit
         アカウントを削除したい場合はこちら
-        #{button_to "ユーザー削除", registration_path(resource_name), data: { confirm: "本当によろしいですか??" }, method: :delete}
+        #{button_to "ユーザー削除", registration_path(resource_name), data: { confirm: "本当によろしいですか??" }, method: :delete, class: "user-delete-btn"}
       = link_to "戻る", :back, class:"back_btn"

@@ -21,11 +21,10 @@
         .input-field {
           width: 300px;
           height: 40px;
-          border-radius: 10px;
         }
       }
       .actions_new {
-        margin-top: 32px;
+        margin-top: 48px;
         margin-bottom: 48px;
         text-align: center;
         .register-btn {
@@ -72,7 +71,6 @@
         .input-field {
           width: 300px;
           height: 40px;
-          border-radius: 10px;
         }
       }
       .field_sessions#check {
@@ -131,7 +129,6 @@
         .edit_form {
           height: 40px;
           width: 300px;
-          border-radius: 10px;
         }
       }
 
@@ -151,22 +148,23 @@
     .user-edit-link {
       margin-bottom: 32px;
       text-align: center;
+      width: fit-content;
+      margin: 0 auto;
       p.edit {
         text-align: center;
         margin-bottom: 12px;
+        font-size: 12px;
       }
-      .buttom_to {
-        width: 100%;
-        padding: 4px;
-        border-radius: 5px;
+      .button_to {
+        width: 50%;
+        margin: 0 auto;
         cursor: pointer;
       }
       .back_btn {
       color: white;
       display: block;
       text-align: center;
-      width: 25%;
-      padding: 4px;
+      width: 50%;
       margin: 24px auto;
       border-radius: 5px;
       background-color: orange;
