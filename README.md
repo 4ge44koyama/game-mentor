@@ -1,6 +1,6 @@
 # G-MEN
 ### ゲーミングメンターサービス
-![App_Image](https://i.gyazo.com/6056d9b7a3b532c66f2e7ef34383e68b.gif)
+<img width="70%" alt="App_Image" src="https://i.gyazo.com/6502d9cca1e7c1febea2cfc579e2b90d.gif">
 
 ## App URL
 
