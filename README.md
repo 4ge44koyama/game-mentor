@@ -1,6 +1,6 @@
 # G-MEN
 ### ゲーミングメンターサービス
-![App_Image](https://i.gyazo.com/503af6cbf9fd4f34c8cf50da7665da50.gif)
+![App_Image](https://i.gyazo.com/6056d9b7a3b532c66f2e7ef34383e68b.gif)
 
 ## App URL
 
@@ -16,7 +16,7 @@
 ![Post_demo](https://i.gyazo.com/f27e7d6cdab0a38c5d6ca82764c680e1.gif)
 
 #### -記事閲覧-
-![Show_post_demo](https://i.gyazo.com/2fca4d822b86836dda3f352e5ac67a78.gif)
+![Show_post_demo](https://i.gyazo.com/a327515aff24bdd7d95a5d6d7ea52fb1.gif)
 
 #### -メッセージ送信-
 ![Send_message_demo](https://i.gyazo.com/f254f7fc81f7350ed0e087a7f1e1c837.gif)
