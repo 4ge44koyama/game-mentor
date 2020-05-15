@@ -1,5 +1,5 @@
-# G-MEN
-### ゲーミングメンターサービス
+# G-MEN:ゲーミングメンターサービス 
+### 〜 ゲームのスキルを教えるサービス 〜
 
 <img src="https://i.gyazo.com/6502d9cca1e7c1febea2cfc579e2b90d.gif" alt="App_Image">
 <p align="center">
@@ -65,7 +65,7 @@
 
 <h3 align="center">- ALL -</h3>
 <div align="center">
-  
+  <img src="/assets/images/app_all.001.png" alt="app_all" width="680px">
 </div>
 <br><br><br><br>
 

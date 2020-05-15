@@ -26,10 +26,16 @@ a:hover {
     left: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
-    font-size: 120px;
+    font-size: 80px;
+    font-weight: bold;
     color: white;
     opacity: 0.6;
-    letter-spacing: 3.0rem;
+    letter-spacing: 0.2rem;
     z-index: 1;
+    span {
+      color: orange;
+      font-size: 120px;
+      font-weight: 700;
+    }
   }
 }
