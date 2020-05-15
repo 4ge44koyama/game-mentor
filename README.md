@@ -65,7 +65,7 @@
 
 <h3 align="center">- ALL -</h3>
 <div align="center">
-  <img src="/assets/images/app_all.001.png" alt="app_all" width="680px">
+  <img src="app/assets/images/app_all.001.png" alt="app_all" width="680px">
 </div>
 <br><br><br><br>
 
