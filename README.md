@@ -1,4 +1,4 @@
-# G-MEN:ゲーミングメンターサービス 
+# G-MEN ゲーミングメンターサービス 
 ### 〜 ゲームのスキルを教えるサービス 〜
 
 <img src="https://i.gyazo.com/6502d9cca1e7c1febea2cfc579e2b90d.gif" alt="App_Image">
@@ -11,13 +11,17 @@
 <br><br><br><br>
 ## App URL
 
-<br><br><br><br>
+### **https://game-mentor.com/**
+
+<br><br>
 ## Usage
 
-<br><br><br><br>
+`$ git clone https://github.com/4ge44koyama/game-mentor.git`
+
+<br><br>
 ### 簡単ログイン機能
 #### ログインまたは新規登録の画面からゲストユーザーとしてログインできます
-<br><br><br><br>
+<br><br>
 
 # Features
 
