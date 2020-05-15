@@ -8,66 +8,66 @@
   <a href="https://aws.amazon.com/jp/"><img src="https://user-images.githubusercontent.com/57832553/73935917-fec20580-4924-11ea-9b42-36715e8d4ede.png" height="60px;" width="90px;" /></a>
 </p>
 
-<br><br><br>
+<br><br><br><br>
 ## App URL
 
-<br><br><br>
+<br><br><br><br>
 ## Usage
 
-<br><br><br>
+<br><br><br><br>
 ### 簡単ログイン機能
 #### ログインまたは新規登録の画面からゲストユーザーとしてログインできます
-<br><br><br>
+<br><br><br><br>
 
 # Features
 
-<h4 align="center">- 記事投稿 -</h4>
+<h3 align="center">- 記事投稿 -</h3>
 <div align="center">
   <img src="https://i.gyazo.com/f27e7d6cdab0a38c5d6ca82764c680e1.gif" width="680px">
 </div>
-<br><br><br>
+<br><br><br><br>
 
-<h4 align="center">- 記事閲覧 -</h4>
+<h3 align="center">- 記事閲覧 -</h3>
 <div align="center">
   <img src="https://i.gyazo.com/a327515aff24bdd7d95a5d6d7ea52fb1.gif" alt="Show_post_demo" width="680px">
 </div>
-<br><br><br>
+<br><br><br><br>
 
-<h4 align="center">- メッセージ送信 -</h4>
+<h3 align="center">- メッセージ送信 -</h3>
 <div align="center">
   <img src="https://i.gyazo.com/f254f7fc81f7350ed0e087a7f1e1c837.gif" alt="Send_message_demo" width="680px">
 </div>
-<br><br><br>
+<br><br><br><br>
 
-<h4 align="center">- リクエスト送信 -</h4>
+<h3 align="center">- リクエスト送信 -</h3>
 <div align="center">
   <img src="https://i.gyazo.com/ea38ba82a5e732920af7108342552ef1.gif" alt="Send_request_demo" width="680px">
 </div>
-<br><br><br>
+<br><br><br><br>
 
-<h4 align="center">- マイページ機能 -</h4>
+<h3 align="center">- マイページ機能 -</h3>
 <div align="center">
   <img src="https://i.gyazo.com/488d200e6118a2df91959b4cbb8a002e.gif" alt="Mypage_demo" width="680px">
 </div>
-<br><br><br>
+<br><br><br><br>
 
-<h4 align="center">- メッセージ返信 -</h4>
+<h3 align="center">- メッセージ返信 -</h3>
 <div align="center">
   <img src="https://i.gyazo.com/a6f18de51252114a8c84ec831078b149.gif" alt="Respond_message_demo" width="680px">
 </div>
-<br><br><br>
+<br><br><br><br>
 
-<h4 align="center">- リクエスト承認 -</h4>
+<h3 align="center">- リクエスト承認 -</h3>
 <div align="center">
   <img src="https://i.gyazo.com/1e598186887725296a8515d770b5a452.gif" alt="Permit_request_demo" width="680px">
 </div>
-<br><br><br>
+<br><br><br><br>
 
-<h4 align="center">- ALL -</h4>
+<h3 align="center">- ALL -</h3>
 <div align="center">
   
 </div>
-<br><br><br>
+<br><br><br><br>
 
 # Author
 - [Github](https://github.com/4ge44koyama)
