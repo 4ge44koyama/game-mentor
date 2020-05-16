@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_one :post, dependent: :destroy
   has_many :requests, dependent: :destroy
   has_many :messages, dependent: :destroy
+  validates :name, :email, :password, :password_confirmation, presence: true
   mount_uploader :image, ImageUploader
 
   def self.guest
