@@ -73,6 +73,13 @@
 </div>
 <br><br><br><br>
 
+# To Be Added
+- メンター評価機能
+- 検索機能の条件追加
+- フロント用技術の導入(ex.JavaScript)
+- インフラ技術の拡張(ex.Docker,Circle/CI)
+
+<br><br><br><br>
 # Author
 - [Github](https://github.com/4ge44koyama)
 - [Twitter](https://twitter.com/Koyama_codeA)
