@@ -1,6 +1,7 @@
 class Request < ApplicationRecord
+  validates :to_id, presence: true
+  validates :status, presence: true, numericality: { equal_to: 1 }
   belongs_to :user
-  validates :user_id, :to_id, :status, presence: true
 
   def to_user
     return User.find(self.to_id)
