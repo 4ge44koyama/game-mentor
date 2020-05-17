@@ -3,8 +3,8 @@ class MessagesController < ApplicationController
   before_action :move_to_login
 
   def index
-    @sent_messages = Message.where(user_id: current_user).order("created_at DESC").page(params[:page]).per(6)
-    @recieved_messages = Message.where(to_id: current_user).order("created_at DESC").page(params[:page]).per(6)
+    @sent_messages = Message.where(user_id: current_user).order("created_at DESC").page(params[:page])
+    @recieved_messages = Message.where(to_id: current_user).order("created_at DESC").page(params[:page])
   end
   
   def create
