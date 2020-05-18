@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   before_action :user_params, only: :update
 
   def show
-    @latest_messages = Message.where(to_id: current_user.id).order("created_at DESC").page(params[:page]).per(6)
+    @latest_messages = Message.where(to_id: current_user.id).order("created_at DESC").page(params[:page])
   end
   
   def edit
