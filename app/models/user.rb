@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-         
+
   validates :name, :email, :password, :password_confirmation, presence: true
   mount_uploader :image, ImageUploader
   has_one :post, dependent: :destroy
@@ -16,5 +16,4 @@ class User < ApplicationRecord
       user.name = "ゲストユーザー"
     end
   end
-  
 end

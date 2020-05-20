@@ -1,14 +1,13 @@
 class UsersController < ApplicationController
-
   before_action :move_to_login
-  before_action :set_user, only: [:show, :edit, :update, :mentor, :mentee]
-  before_action :check_user, only: [:show, :edit, :update, :mentor, :mentee]
+  before_action :set_user, only: %i[show edit update mentor mentee]
+  before_action :check_user, only: %i[show edit update mentor mentee]
   before_action :user_params, only: :update
 
   def show
     @latest_messages = Message.where(to_id: current_user.id).order("created_at DESC").page(params[:page])
   end
-  
+
   def edit
     if current_user.id == @user.id
       @find_post = Post.find_by(user_id: current_user.id)
@@ -34,6 +33,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def set_user
     @user = User.find(params[:id])
   end
@@ -53,6 +53,4 @@ class UsersController < ApplicationController
   def check_user
     redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless @user.id == current_user.id
   end
-
 end
-

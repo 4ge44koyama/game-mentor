@@ -3,13 +3,11 @@ require 'rails_helper'
 describe User do
   describe '#create' do
     context '登録ができない' do
-
       it "nameがない場合は登録できないこと" do
         user = build(:user, name: "")
         user.valid?
         expect(user.errors[:name]).to include("を入力してください")
       end
-    
 
       it "emailがない場合は登録できないこと" do
         user = build(:user, email: "")
@@ -37,7 +35,6 @@ describe User do
     end
 
     context '投稿ができる' do
-
       it "name、email、passwordとpassword_confirmationが存在すれば登録できること" do
         user = build(:user)
         expect(user).to be_valid
@@ -47,7 +44,6 @@ describe User do
         user = build(:user, password: "123456789", password_confirmation: "123456789")
         expect(user).to be_valid
       end
-
     end
   end
 end

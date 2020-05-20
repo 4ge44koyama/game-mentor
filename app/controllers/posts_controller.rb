@@ -1,14 +1,13 @@
 class PostsController < ApplicationController
-
   before_action :move_to_login, except: :index
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  
+  before_action :set_post, only: %i[show edit update destroy]
+
   def index
     @posts = Post.includes(:user).order("created_at DESC").page(params[:page])
   end
 
   def new
-    if nil == Post.find_by(user_id: current_user.id)
+    if Post.find_by(user_id: current_user.id).nil?
       @post = Post.new
     else
       redirect_to edit_post_path(current_user.post.id), method: :get, alert: '投稿は1人につき1件です'
@@ -21,7 +20,7 @@ class PostsController < ApplicationController
       redirect_to post_path @post, notice: '投稿が完了しました'
     else
       redirect_to new_post_path, alert: '投稿が保存できませんでした'
-    end  
+    end
   end
 
   def show
@@ -50,6 +49,7 @@ class PostsController < ApplicationController
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :content, :fee, :tag_list).merge(user_id: current_user.id)
   end
@@ -61,5 +61,4 @@ class PostsController < ApplicationController
   def move_to_login
     redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless user_signed_in?
   end
-
 end

@@ -17,13 +17,13 @@ feature 'post', type: :feature do
     expect(page).to have_content('投稿をする')
 
     # メンター記事を投稿する
-    expect {
+    expect do
       click_link('投稿をする')
       expect(current_path).to eq new_post_path
       fill_in 'post_title', with: 'フィーチャスペックのテスト'
       fill_in 'post_content', with: 'フィーチャスペックのテスト'
       fill_in 'post_fee', with: '1000円 / 月'
       find('input[type="submit"]').click
-    }.to change(Post, :count).by(1)
+    end.to change(Post, :count).by(1)
   end
 end

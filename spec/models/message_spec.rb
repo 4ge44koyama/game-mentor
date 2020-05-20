@@ -3,7 +3,6 @@ require 'rails_helper'
 describe Message, type: :model do
   describe '#create' do
     context '送信ができない' do
-
       it "contentが空の場合送信できない事" do
         message = build(:message, content: "")
         message.valid?
@@ -21,16 +20,13 @@ describe Message, type: :model do
         message.valid?
         expect(message.errors[:user]).to include("を入力してください")
       end
-
     end
 
     context '送信ができる' do
-
       it "contentとto_idとuser_idが存在すれば送信できること" do
         message = build(:message)
         expect(message).to be_valid
       end
-
     end
   end
 end

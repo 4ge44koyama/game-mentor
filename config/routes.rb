@@ -9,16 +9,15 @@ Rails.application.routes.draw do
   namespace :posts do
     resources :searches
   end
-  resources :users, only: [:show, :edit, :update] do
+  resources :users, only: %i[show edit update] do
     resources :requests, only: :index
-    resources :messages, only: [:index, :show]
+    resources :messages, only: %i[index show]
     member do
       get 'mentor', to: 'users#mentor'
       get 'mentee', to: 'users#mentee'
     end
-
   end
-  resources :requests, only: [:create, :update, :destroy]
+  resources :requests, only: %i[create update destroy]
   resources :posts, except: :index
   resources :messages, only: :create
 end

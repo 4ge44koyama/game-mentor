@@ -1,5 +1,4 @@
 class RequestsController < ApplicationController
-
   def index
     @requested_lists = Request.where(to_id: current_user.id)
     @request_lists = Request.where(user_id: current_user.id)
@@ -39,5 +38,4 @@ class RequestsController < ApplicationController
   def request_params
     params.require(:request).permit(:to_id, :status).merge(user_id: current_user.id)
   end
-
 end

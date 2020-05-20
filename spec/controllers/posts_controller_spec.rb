@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe PostsController, type: :controller do
-
   let(:post_bot) { create(:post) }
   let(:user) { create(:user) }
 
@@ -9,7 +8,7 @@ describe PostsController, type: :controller do
     it "@postsに正しい値が入っている事" do
       posts = create_list(:post, 3)
       get :index
-      expect(assigns(:posts)).to match(posts.sort{|a, b| b.created_at <=> a.created_at })
+      expect(assigns(:posts)).to match(posts.sort { |a, b| b.created_at <=> a.created_at })
     end
     it "投稿一覧ページへの遷移" do
       get :index
@@ -34,7 +33,7 @@ describe PostsController, type: :controller do
       end
       it "ユーザー登録へ" do
         expect(response).to redirect_to(new_user_registration_path)
-      end  
+      end
     end
   end
 
@@ -56,7 +55,7 @@ describe PostsController, type: :controller do
     context "未ログイン" do
       before do
         get :edit, params: { id: post_bot }
-      end 
+      end
       it "ユーザー登録へ" do
         expect(response).to redirect_to(new_user_registration_path)
       end
@@ -101,7 +100,7 @@ describe PostsController, type: :controller do
 
       xit "保存成功後のリダイレクト" do
         post :create, params: { user_id: user, post: attributes_for(:post) }
-        expect(response).to redirect_to ("http://test.host/posts/1")
+        expect(response).to redirect_to("http://test.host/posts/1")
       end
 
       it "データベースへ保存できていないか" do
