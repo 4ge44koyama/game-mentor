@@ -72,8 +72,10 @@
   <img src="app/assets/images/app_all.001.png" alt="app_all" width="680px">
 </div>
 <br>
+
 ### 5月20日追記
 #### 単体テスト、統合テスト完了
+
 <br><br><br><br>
 
 # To Be Added
