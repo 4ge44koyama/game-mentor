@@ -8,11 +8,11 @@
         = image_tag 'default-user-image.png', class: 'user-profile__icon__show'
     .user-profile__info
       .user-profile__info__name
-        名前: #{@a_post.user.name}
+        %a.user-profile__info__name__insert 名前: #{@a_post.user.name}
       .user-profile__info__fee
-        料金: #{@a_post.fee}
+        %a.user-profile__info__fee__insert 料金: #{@a_post.fee}
       .user-profile__info__score
-        評価: ★★★★★(10)
+        %a.user-profile__info__score__insert 評価: ★★★★★(10)
   .user-appeal
     .post__title
       = @a_post.title
