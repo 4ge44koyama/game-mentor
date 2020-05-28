@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include UsersHelper
   before_action :move_to_login
   before_action :set_user, only: %i[show edit update mentor mentee]
   before_action :check_user, only: %i[show edit update mentor mentee]
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if current_user.id == @user.id
+    if current_user?(@user)
       @find_post = Post.find_by(user_id: current_user.id)
     else
       redirect_to new_user_registration_path, alert: 'ログインをお願いします'
@@ -47,10 +48,10 @@ class UsersController < ApplicationController
   end
 
   def move_to_login
-    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless user_signed_in?
+    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' if !user_signed_in?
   end
 
   def check_user
-    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless @user.id == current_user.id
+    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' if !current_user?(@user)
   end
 end

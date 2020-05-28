@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  include PostsHelper
   before_action :move_to_login, except: :index
   before_action :set_post, only: %i[show edit update destroy]
 
@@ -30,7 +31,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    redirect_to new_user_registration_path, alert: 'ログインをお願いします' unless current_user.id == @a_post.user_id
+    redirect_to new_user_registration_path, alert: 'ログインをお願いします' if !current_user_post?(@a_post)
   end
 
   def update
@@ -40,7 +41,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    redirect_to new_user_registration_path, alert: 'ログインをお願いします' unless current_user.id == @a_post.user_id
+    redirect_to new_user_registration_path, alert: 'ログインをお願いします' if !current_user_post?(@a_post)
     if @a_post.destroy
       redirect_to root_path, notice: '投稿を削除しました'
     else
@@ -59,6 +60,6 @@ class PostsController < ApplicationController
   end
 
   def move_to_login
-    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless user_signed_in?
+    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' if !user_signed_in?
   end
 end

@@ -28,6 +28,6 @@ class MessagesController < ApplicationController
   end
 
   def move_to_login
-    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' unless user_signed_in?
+    redirect_to new_user_registration_path, alert: 'ログインまたは新規登録をお願いします' if !user_signed_in?
   end
 end
