@@ -27,7 +27,7 @@
             %li #{@a_post.tag_list.third}
       = safe_join(@a_post.content.split("\n"),tag(:br))
 
-- if user_signed_in? && current_user.id == @a_post.user_id
+- if user_signed_in? && current_user_post?(@a_post)
   .edit-and-destroy-links 
     = link_to "プロフィールを編集する", edit_user_path(current_user.id), class: "edit-and-destroy-links__link"
     = link_to "投稿内容を編集する", edit_post_path(@a_post.id), class: "edit-and-destroy-links__link"
