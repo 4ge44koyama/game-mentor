@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_16_084530) do
+ActiveRecord::Schema.define(version: 2020_05_31_141841) do
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content"
@@ -39,6 +39,17 @@ ActiveRecord::Schema.define(version: 2020_05_16_084530) do
     t.datetime "updated_at", null: false
     t.index ["to_id"], name: "index_requests_on_to_id"
     t.index ["user_id"], name: "index_requests_on_user_id"
+  end
+
+  create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "content"
+    t.float "rate"
+    t.bigint "user_id", null: false
+    t.bigint "to_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["to_id"], name: "index_reviews_on_to_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "taggings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -86,5 +97,7 @@ ActiveRecord::Schema.define(version: 2020_05_16_084530) do
   add_foreign_key "messages", "users", column: "to_id"
   add_foreign_key "requests", "users"
   add_foreign_key "requests", "users", column: "to_id"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "reviews", "users", column: "to_id"
   add_foreign_key "taggings", "tags"
 end
