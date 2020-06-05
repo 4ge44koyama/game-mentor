@@ -9,90 +9,119 @@
 
   &__list {
     border-bottom: 1px solid #eee;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
     &__wrapper {
-      display: flex;
-      padding-bottom: 8px;
-      &__user {
-        width: 40%;
-        text-align: center;
-        .mentor-icon {
-          width: 25%;
-          margin: 0 auto;
-          &__img {
-            object-fit: contain;
-            height: 100%;
-            width: 100%;
+      &__flex {
+        display: flex;
+        margin-bottom: 8px;
+        &__user {
+          width: 40%;
+          text-align: center;
+          margin: auto;
+          .mentor-icon {
+            width: 25%;
+            margin: 0 auto;
+            &__img {
+              object-fit: contain;
+              height: 100%;
+              width: 100%;
+            }
           }
-        }
-        .mentor-name {
-          width: fit-content;
-          margin: 0 auto;
-          margin-top: 8px;
-          display: block;
-          font-size: 14px;
-          &__link {
-            font-size: 14px;
-            font-weight: bold;
-            color: black;
-            cursor: pointer;
-          }
-        }
-      }
-      &__info {
-        width: 60%;
-
-        .mentor-tags {
-
-          a {
-            padding: 4px 16px;
-            font-size: 14px;
-            font-weight: bold;
-            color: white;
-            background-color: rgb(0, 174, 255);
-            cursor: none;
-          }
-          a:hover {
-            opacity: 1;
-          }
-          ul {
-            display: flex;
+          .mentor-name {
+            width: fit-content;
+            margin: 0 auto;
             margin-top: 8px;
-            margin-bottom: 8px;
-            li {
+            display: block;
+            font-size: 14px;
+            &__link {
+              font-size: 14px;
+              font-weight: bold;
+              color: black;
+              cursor: pointer;
+            }
+          }
+        }
+        &__info {
+          width: 60%;
+
+          .mentor-tags {
+
+            a {
+              padding: 4px 16px;
+              font-size: 14px;
+              font-weight: bold;
+              color: white;
+              background-color: rgb(0, 174, 255);
+              cursor: none;
+            }
+            a:hover {
+              opacity: 1;
+            }
+            ul {
+              display: flex;
+              margin-top: 8px;
+              margin-bottom: 8px;
+              li {
+                font-size: 12px;
+                font-weight: bold;
+                background-color: orange;
+                color: white;
+                border-radius: 10px;
+                margin-right: 16px;
+                padding: 2px 16px;
+              }
+            }
+          }
+          .mentor-fee {
+            border-top: 1px solid #eee;
+            padding-top: 8px;
+            a {
+              padding: 4px 30px;
+              font-size: 14px;
+              font-weight: bold;
+              color: white;
+              background-color: rgb(0, 174, 255);
+              cursor: none;
+            }
+            a:hover {
+              opacity: 1;
+            }
+            &__text {
+              width: fit-content;
               font-size: 12px;
               font-weight: bold;
               background-color: orange;
               color: white;
               border-radius: 10px;
-              margin-right: 16px;
               padding: 2px 16px;
+              margin-top: 8px;
+              margin-bottom: 8px;
             }
           }
-        }
-        .mentor-fee {
-          border-top: 1px solid #eee;
-          padding-top: 8px;
-          a {
-            padding: 4px 30px;
-            font-size: 14px;
-            font-weight: bold;
-            color: white;
-            background-color: rgb(0, 174, 255);
-            cursor: none;
-          }
-          a:hover {
-            opacity: 1;
-          }
-          &__text {
-            width: fit-content;
-            font-size: 12px;
-            font-weight: bold;
-            background-color: orange;
-            color: white;
-            border-radius: 10px;
-            padding: 2px 16px;
-            margin-top: 8px;
+          .mentor-reviews {
+            border-top: 1px solid #eee;
+            padding-top: 8px;
+            a {
+              padding: 4px 30px;
+              font-size: 14px;
+              font-weight: bold;
+              color: white;
+              background-color: rgb(0, 174, 255);
+              cursor: none;
+            }
+            a:hover {
+              opacity: 1;
+            }
+            &__rate {
+              width: fit-content;
+              font-size: 12px;
+              font-weight: bold;
+              background-color: orange;
+              color: white;
+              border-radius: 10px;
+              padding: 2px 16px;
+              margin-top: 8px;
+            }
           }
         }
       }
