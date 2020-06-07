@@ -1,33 +1,51 @@
 %li.mentor-all__list
   .mentor-all__list__wrapper
-    .mentor-all__list__wrapper__flex
-      .mentor-all__list__wrapper__flex__user
-        .mentor-icon
-          - if mentor.to_user.image.present?
-            = image_tag mentor.to_user.image.url, class: "mentor-icon__img"
-          - else
-            = image_tag "default-user-image.png", class: "mentor-icon__img"
-        .mentor-name
-          = link_to "#{mentor.to_user.name}さん", post_path(mentor.search_post.id), method: :get, class: "mentor-name__link"
+    .mentor-all__list__wrapper__user
+      .mentor-icon
+        - if mentor.to_user.image.present?
+          = image_tag mentor.to_user.image.url, class: "mentor-icon__img"
+        - else
+          = image_tag "default-user-image.png", class: "mentor-icon__img"
+      .mentor-name
+        = link_to "#{mentor.to_user.name}さん", post_path(mentor.search_post.id), method: :get, class: "mentor-name__link"
 
-      .mentor-all__list__wrapper__flex__info
-        .mentor-tags
-          %a 投稿タグ
-          %ul
-            - if mentor.search_post.tag_list.first.present?
-              %li #{mentor.search_post.tag_list.first}
-            - if mentor.search_post.tag_list.second.present?
-              %li #{mentor.search_post.tag_list.second}
-            - if mentor.search_post.tag_list.third.present?
-              %li #{mentor.search_post.tag_list.third}
-        .mentor-fee
-          %a 料金
-        .mentor-fee__text
-          = mentor.search_post.fee
-        .mentor-reviews
-          %a 評価
-        .mentor-reviews__rate
-          4.8 (10)
+    .mentor-all__list__wrapper__info
+      .mentor-tags
+        %a 投稿タグ
+        %ul
+          - if mentor.search_post.tag_list.first.present?
+            %li #{mentor.search_post.tag_list.first}
+          - if mentor.search_post.tag_list.second.present?
+            %li #{mentor.search_post.tag_list.second}
+          - if mentor.search_post.tag_list.third.present?
+            %li #{mentor.search_post.tag_list.third}
+      .mentor-fee
+        %a 料金
+      .mentor-fee-text
+        = mentor.search_post.fee
+      .mentor-reviews
+        %a 評価
+      .mentor-reviews-rate
+        4.8 (10)
 
-    .mentor-all__list__wrapper__review
-    
+  .mentor-all__list__review
+    %a.review-form-label 口コミを書く
+    = form_with model: [@user, @review], class: :form, local: true do |form|
+      .star-rate#star
+        %a.star-rate-label 評価:
+        = form.hidden_field :rate, id: "review_star"
+      .review-form-flex
+        = form.text_area :content, placeholder: "レビュー内容", class: "review-content-field"
+        = form.hidden_field :to_id, value: mentor.to_id
+        = form.submit "送信", class: "review-submit-btn"
+
+  / 評価javascript
+  :javascript
+    $('#star').raty({
+      size     : 36,
+      starOff:  '<%= asset_path('star-off.png') %>',
+      starOn : '<%= asset_path('star-on.png') %>',
+      starHalf: '<%= asset_path('star-half.png') %>',
+      scoreName: 'review[rate]',
+      half: true,
+    });
