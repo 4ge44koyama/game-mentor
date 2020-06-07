@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 
   def mentor
     @permitted_requests = Request.where(user_id: current_user.id).where(status: 1)
+    @review = Review.new
   end
 
   def mentee

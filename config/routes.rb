@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[show edit update] do
     resources :requests, only: :index
     resources :messages, only: %i[index show]
+    resources :reviews, only: :create
     member do
       get 'mentor', to: 'users#mentor'
       get 'mentee', to: 'users#mentee'
