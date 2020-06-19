@@ -78,8 +78,13 @@
           display: flex;
           padding-top: 4px;
           padding-bottom: 8px;
-          .personal-score {
+          .personal-score1 {
+            padding-top: 2px;
+            margin-right: 16px;
             margin-left: 28px;
+            img {
+              height: 20px;
+            }
           }
         }
       }

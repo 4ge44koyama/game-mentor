@@ -20,4 +20,8 @@ class Request < ApplicationRecord
   def search_post
     Post.find_by(user_id: to_id)
   end
+
+  def reviews
+    Review.where(to_id: to_id)
+  end
 end

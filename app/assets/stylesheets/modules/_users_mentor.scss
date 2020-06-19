@@ -136,42 +136,49 @@
       color: white;
       background-color: rgb(0, 174, 255);
       padding: 4px 8px;
-      pointer-events: none;
+      cursor: pointer;
     }
-    .form {
-      .star-rate {
-        height: 32px;
-
-        img {
-          height: 24px;
-          width: 24px;
+    .review-form-wrapper {
+      .form {
+        .star-rate {
+          height: 32px;
+          width: fit-content;
+          display: flex;
+          
+          .star-rate-label {
+            font-size: 14px;
+            font-weight: bold;
+            pointer-events: none;
+            margin: auto;
+            margin-right: 24px;
+          }
+          &__form {
+            margin-top: auto;
+            img {
+              height: 24px;
+            }
+          }
         }
-
-        .star-rate-label {
-          font-size: 12px;
-          font-weight: bold;
-          pointer-events: none;
-        }
-      }
-      
-      .review-form-flex {
-        display: flex;
-
-        .review-content-field {
-          display: block;
-          height: 28px;
-          margin-right: 2px;
-          width: 90%;
-        }
-        .review-submit-btn {
-          background-color: rgb(161, 154, 154);
-          color: white;
-          font-size: 12px;
-          font-weight: bold;
-          border: 1px solid;
-          display: block;
-          width: 5%;
-          cursor: pointer;
+        
+        .review-form-flex {
+          display: flex;
+  
+          .review-content-field {
+            display: block;
+            height: 28px;
+            width: 90%;
+            margin-right: 2px;
+          }
+          .review-submit-btn {
+            background-color: rgb(161, 154, 154);
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            border: 1px solid;
+            display: block;
+            width: 5%;
+            cursor: pointer;
+          }
         }
       }
     }
