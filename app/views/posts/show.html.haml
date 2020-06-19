@@ -12,7 +12,22 @@
       .user-profile__info__fee
         %a.user-profile__info__fee__insert 料金: #{@a_post.fee}
       .user-profile__info__score
-        %a.user-profile__info__score__insert 評価: ★★★★★(10)
+        %a.user-profile__info__score__insert 評価:&nbsp;
+        .user-profile__info__score__star#star-rate
+        %a.user-profile__info__score__insert &nbsp;#{@a_post.user.reviews.average(:rate).to_f.round(1)}
+        %a.user-profile__info__score__insert (#{@a_post.user.reviews.count}件)
+
+        :javascript
+          $('*#star-rate').raty({
+            size     : 36,
+            starOff:  '#{asset_path('star-off.png')}',
+            starOn : '#{asset_path('star-on.png')}',
+            starHalf: '#{asset_path('star-half.png')}',
+            half: true,
+            readOnly: true,
+            score: "#{@a_post.user.reviews.average(:rate).to_f.round(1)}",
+          });
+
   .user-appeal
     .post__title
       = @a_post.title

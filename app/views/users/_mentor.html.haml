@@ -26,26 +26,40 @@
       .mentor-reviews
         %a 評価
       .mentor-reviews-rate
-        4.8 (10)
-
+        = mentor.reviews.average(:rate).to_f.round(1)
+        %a (#{mentor.reviews.count}件)
+  
   .mentor-all__list__review
-    %a.review-form-label 口コミを書く
-    = form_with model: [@user, @review], class: :form, local: true do |form|
-      .star-rate#star
-        %a.star-rate-label 評価:
-        = form.hidden_field :rate, id: "review_star"
-      .review-form-flex
-        = form.text_area :content, placeholder: "レビュー内容", class: "review-content-field"
-        = form.hidden_field :to_id, value: mentor.to_id
-        = form.submit "送信", class: "review-submit-btn"
+    %a.review-form-label{ id: "write-review-#{mentor.to_user.id}" } 口コミを書く
+    .review-form-wrapper{ id: mentor.to_user.id }
+      = form_with model: [@user, @review], class: :form, local: true do |form|
+        .star-rate
+          %a.star-rate-label 評価:
+          #star.star-rate__form
+            = form.hidden_field :rate, id: "review_star"
+        .review-form-flex
+          = form.text_area :content, placeholder: "レビュー内容", class: "review-content-field"
+          = form.hidden_field :to_id, value: mentor.to_id
+          = form.submit "送信", class: "review-submit-btn"
 
   / 評価javascript
   :javascript
-    $('#star').raty({
+    $('*#star').raty({
       size     : 36,
-      starOff:  '<%= asset_path('star-off.png') %>',
-      starOn : '<%= asset_path('star-on.png') %>',
-      starHalf: '<%= asset_path('star-half.png') %>',
+      starOff:  '#{asset_path('star-off.png')}',
+      starOn : '#{asset_path('star-on.png')}',
+      starHalf: '#{asset_path('star-half.png')}',
       scoreName: 'review[rate]',
       half: true,
+    });
+
+    $(function(){
+      $('.review-form-wrapper').hide();
+
+      $('#write-review-#{mentor.to_user.id}').on('click', function(){
+        var labelId = $(this).attr('id').replace(/[^0-9]/g, '');
+        console.log(labelId);
+        $('#' + labelId).toggle(500);
+      });
+
     });

@@ -27,5 +27,17 @@
           = post.fee
       .mentor-card__bottom__score
         評価:
-        .personal-score
-          ☆☆☆☆☆
+        .personal-score1{ id: "star-rate-#{post.user.id}" }
+        .personal-score #{post.user.reviews.average(:rate).to_f.round(1)}
+        .personal-score (#{post.user.reviews.count}件)
+
+        :javascript
+          $('#star-rate-#{post.user.id}').raty({
+            size     : 32,
+            starOff:  '#{asset_path('star-off.png')}',
+            starOn : '#{asset_path('star-on.png')}',
+            starHalf: '#{asset_path('star-half.png')}',
+            half: true,
+            readOnly: true,
+            score: "#{post.user.reviews.average(:rate).to_f.round(1)}",
+          });

@@ -6,4 +6,5 @@ class Post < ApplicationRecord
   validates :fee, presence: true
   paginates_per 6
   belongs_to :user
+
 end
