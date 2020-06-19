@@ -6,6 +6,8 @@
   <a href="https://rubyonrails.org/"><img src="https://camo.githubusercontent.com/e6318bb26cecc5eaec3548fe7446e2ccc0820afe/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f3534333133332f37613663323763642d303963622d623965372d376231622d3163623536646662656530632e706e67" height="60px;" /></a>
   &emsp;&emsp;&emsp;
   <a href="https://aws.amazon.com/jp/"><img src="https://user-images.githubusercontent.com/57832553/73935917-fec20580-4924-11ea-9b42-36715e8d4ede.png" height="60px;" width="90px;" /></a>
+  &emsp;&emsp;&emsp;
+  <a href="https://jquery.com/"><img src="https://user-images.githubusercontent.com/57832553/73933784-96712500-4920-11ea-974f-23b73e2c6113.png" height="60px;"/></a>
 </p>
 
 <br><br><br><br>
@@ -75,13 +77,15 @@
 
 ### 5月20日追記
 #### 単体テスト、統合テスト完了
+### 6月19日追記
+#### レビュー投稿機能追加
 
 <br><br><br><br>
 
 # To Be Added
-- メンター評価機能
+- (実装済み) - メンター評価機能
+- (実装済み) - フロント用技術の導入(ex.JavaScript)
 - 検索機能の条件追加
-- フロント用技術の導入(ex.JavaScript)
 - インフラ技術の拡張(ex.Docker,Circle CI/CD)
 
 <br><br><br><br>
