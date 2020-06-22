@@ -127,7 +127,6 @@
 .message-and-request-links {
   width: 100%;
   background-color: orange;
-  padding-bottom: 16px;
   &__form {
     width: 100%;
     background-color: orange;
@@ -150,6 +149,7 @@
   .message-form {
     width: 55%;
     margin: 0 auto;
+    padding-bottom: 16px;
     background-color: orange;
     &__guide {
       color: white;

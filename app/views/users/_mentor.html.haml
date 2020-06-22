@@ -58,7 +58,6 @@
 
       $('#write-review-#{mentor.to_user.id}').on('click', function(){
         var labelId = $(this).attr('id').replace(/[^0-9]/g, '');
-        console.log(labelId);
         $('#' + labelId).toggle(500);
       });
 

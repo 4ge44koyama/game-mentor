@@ -56,6 +56,8 @@
         = form_with model: @request, local: true do |form|
           = form.hidden_field :to_id, value: @a_post.user_id
           = form.submit "メンターリクエストを送る", class: "message-and-request-links__form__link", data: { confirm: "#{@a_post.user.name}さんにメンターリクエストを送信しますか??" }
+      %a.message-and-request-links__form__link#message-form-btn メッセージを送る
+
     .message-form
       %a.message-form__guide #{@a_post.user.name}さんへのメッセージはこちら
       .message-form__margin
@@ -63,3 +65,12 @@
           = form.text_field :content, placeholder: "#{@a_post.user.name}さんへ", class: "message-form__box__content"
           = form.hidden_field :to_id, value: @a_post.user.id
           = form.submit '送信', class: "message-form__box__btn"
+
+    :javascript
+      $(function(){
+        $('.message-form').hide();
+
+        $('#message-form-btn').on('click', function(){
+          $('.message-form').toggle(500);
+        });
+      });
